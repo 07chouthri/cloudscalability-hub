@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom';
 import {
   Mail,
@@ -15,6 +16,14 @@ import { Input } from '@/components/ui/input';
 import Logo from '../images/Hads.png';
 
 const Footer = () => {
+  // Function to handle navigation with scroll to top
+  const handleNavigation = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <footer className="bg-hads-footerbg text-gray-800 pt-16 pb-8 shadow-sm border-t border-hads-purple/10">
       <div className="container max-w-7xl mx-auto px-4">
@@ -22,7 +31,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-12 pb-12 border-b border-hads-purple/10">
           {/* Company Info */}
           <div className="lg:col-span-5 space-y-6">
-            <Link to="/" className="flex items-center gap-2 mb-6">
+            <Link to="/" className="flex items-center gap-2 mb-6" onClick={handleNavigation}>
               <div className="h-28 w-auto">
                 <img src={Logo} alt="HADS Logo" className="h-full w-auto object-contain" />
               </div>
@@ -51,19 +60,19 @@ const Footer = () => {
           <div className="lg:col-span-3 space-y-6">
             <h3 className="text-xl font-semibold text-gray-800">Quick Links</h3>
             <div className="grid grid-cols-1 gap-3">
-              <Link to="/" className="text-gray-600 hover:text-hads-teal transition-colors flex items-center">
+              <Link to="/" className="text-gray-600 hover:text-hads-teal transition-colors flex items-center" onClick={handleNavigation}>
                 <span className="mr-1">Home</span>
               </Link>
-              <Link to="/about" className="text-gray-600 hover:text-hads-teal transition-colors flex items-center">
+              <Link to="/about" className="text-gray-600 hover:text-hads-teal transition-colors flex items-center" onClick={handleNavigation}>
                 <span className="mr-1">About Us</span>
               </Link>
-              <Link to="/services" className="text-gray-600 hover:text-hads-teal transition-colors flex items-center">
+              <Link to="/services" className="text-gray-600 hover:text-hads-teal transition-colors flex items-center" onClick={handleNavigation}>
                 <span className="mr-1">Services</span>
               </Link>
-              <Link to="/careers" className="text-gray-600 hover:text-hads-teal transition-colors flex items-center">
+              <Link to="/careers" className="text-gray-600 hover:text-hads-teal transition-colors flex items-center" onClick={handleNavigation}>
                 <span className="mr-1">Careers</span>
               </Link>
-              <Link to="/contact" className="text-gray-600 hover:text-hads-teal transition-colors flex items-center">
+              <Link to="/contact" className="text-gray-600 hover:text-hads-teal transition-colors flex items-center" onClick={handleNavigation}>
                 <span className="mr-1">Contact</span>
               </Link>
             </div>
@@ -136,19 +145,19 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} HADS Innovative Solution. All rights reserved.
           </p>
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-4 md:mt-0">
-            <Link to="/privacy" className="text-gray-500 hover:text-hads-teal text-sm transition-colors">
+            <Link to="/privacy" className="text-gray-500 hover:text-hads-teal text-sm transition-colors" onClick={handleNavigation}>
               Privacy Policy
             </Link>
-            <Link to="/terms" className="text-gray-500 hover:text-hads-teal text-sm transition-colors">
+            <Link to="/terms" className="text-gray-500 hover:text-hads-teal text-sm transition-colors" onClick={handleNavigation}>
               Terms of Service
             </Link>
-            <Link to="/sitemap" className="text-gray-500 hover:text-hads-teal text-sm transition-colors">
+            <Link to="/sitemap" className="text-gray-500 hover:text-hads-teal text-sm transition-colors" onClick={handleNavigation}>
               Sitemap
             </Link>
-            <Link to="/faqs" className="text-gray-500 hover:text-hads-teal text-sm transition-colors">
+            <Link to="/faqs" className="text-gray-500 hover:text-hads-teal text-sm transition-colors" onClick={handleNavigation}>
               FAQs
             </Link>
-            <Link to="/support" className="text-gray-500 hover:text-hads-teal text-sm transition-colors">
+            <Link to="/support" className="text-gray-500 hover:text-hads-teal text-sm transition-colors" onClick={handleNavigation}>
               Support
             </Link>
           </div>

@@ -13,31 +13,31 @@ const GlobalCoverageSection = () => {
       code: "AE",
       name: "UAE",
       continent: "Asia",
-      logo: <img src="https://flagcdn.com/w80/ae.png" alt="UAE Flag" className="w-16 h-12 mb-4 mx-auto" />
+      logo: <img src="https://flagcdn.com/w160/ae.png" alt="UAE Flag" className="w-16 h-12 mb-4 mx-auto object-cover rounded shadow-sm" />
     },
     {
       code: "IN",
       name: "India",
       continent: "Asia",
-      logo: <img src="https://flagcdn.com/w80/in.png" alt="India Flag" className="w-16 h-12 mb-4 mx-auto" />
+      logo: <img src="https://flagcdn.com/w160/in.png" alt="India Flag" className="w-16 h-12 mb-4 mx-auto object-cover rounded shadow-sm" />
     },
     {
       code: "CA",
       name: "Canada",
       continent: "North America",
-      logo: <img src="https://flagcdn.com/w80/ca.png" alt="Canada Flag" className="w-16 h-12 mb-4 mx-auto" />
+      logo: <img src="https://flagcdn.com/w160/ca.png" alt="Canada Flag" className="w-16 h-12 mb-4 mx-auto object-cover rounded shadow-sm" />
     },
     {
       code: "US",
       name: "United States",
       continent: "North America",
-      logo: <img src="https://flagcdn.com/w80/us.png" alt="US Flag" className="w-16 h-12 mb-4 mx-auto" />
+      logo: <img src="https://flagcdn.com/w160/us.png" alt="US Flag" className="w-16 h-12 mb-4 mx-auto object-cover rounded shadow-sm" />
     },
     {
       code: "AU",
       name: "Australia",
       continent: "Oceania",
-      logo: <img src="https://flagcdn.com/w80/au.png" alt="Australia Flag" className="w-16 h-12 mb-4 mx-auto" />
+      logo: <img src="https://flagcdn.com/w160/au.png" alt="Australia Flag" className="w-16 h-12 mb-4 mx-auto object-cover rounded shadow-sm" />
     },
     {
       code: "AF",
@@ -52,7 +52,6 @@ const GlobalCoverageSection = () => {
       )
     }
   ];
-
 
   return (
     <section ref={sectionRef} className="py-20 rounded-[20px] bg-gray-50">
@@ -75,7 +74,8 @@ const GlobalCoverageSection = () => {
             "text-lg text-gray-700 max-w-3xl mx-auto transition-all duration-700 delay-100 transform",
             isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           )}>
-            With a footprint that spans continents, we serve clients worldwide through localized expertise. From innovative tech hubs to emerging digital markets, we deliver seamless collaboration and top-tier solutions wherever they're needed.      </p>
+            With a footprint that spans continents, we serve clients worldwide through localized expertise. From innovative tech hubs to emerging digital markets, we deliver seamless collaboration and top-tier solutions wherever they're needed.
+          </p>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
@@ -96,7 +96,6 @@ const GlobalCoverageSection = () => {
         </div>
       </div>
     </section>
-
   );
 };
 

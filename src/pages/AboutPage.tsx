@@ -1,10 +1,12 @@
+
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Building, Users, Globe, Award, BookOpen } from 'lucide-react';
+import { ArrowRight, Building, Users, Globe, Award, BookOpen, Briefcase, Linkedin, Twitter, Mail } from 'lucide-react';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import { Link } from 'react-router-dom';
+import AboutSection from '@/components/AboutSection';
 
 const AboutPage = () => {
   return (
@@ -74,6 +76,159 @@ const AboutPage = () => {
           </div>
         </section>
 
+        {/* Leadership Section - NEW */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+                <span className="text-gray-800">Our </span>
+                <span className="text-hads-pink">Leadership</span>
+              </h2>
+              
+              {/* CEO Profile */}
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-16">
+                <div className="md:flex">
+                  <div className="md:w-1/3 relative">
+                    <div className="h-80 bg-gradient-to-br from-hads-purple to-hads-pink flex items-center justify-center">
+                      <img 
+                        src="https://images.unsplash.com/photo-1560250097-0b93528c311a" 
+                        alt="CEO Portrait" 
+                        className="h-48 w-48 rounded-full object-cover border-4 border-white shadow-lg"
+                      />
+                    </div>
+                  </div>
+                  <div className="md:w-2/3 p-8">
+                    <div className="uppercase tracking-wide text-sm text-hads-teal font-semibold">Founder & CEO</div>
+                    <h3 className="text-2xl font-bold text-gray-900 mt-2">John Smith</h3>
+                    <p className="text-gray-600 text-lg italic mt-1 mb-4">"Empowering businesses through cloud innovation"</p>
+                    
+                    <p className="text-gray-700 mt-4">
+                      With over 15 years of experience in cloud technology and digital transformation, John has led HADS from its inception to becoming a trusted partner for businesses worldwide. His vision for accessible cloud solutions drives our mission to empower organizations of all sizes.
+                    </p>
+                    
+                    <p className="text-gray-700 mt-4">
+                      Prior to founding HADS, John held leadership positions at Google Cloud and AWS, where he developed expertise in enterprise-scale cloud migrations and digital transformation strategies.
+                    </p>
+                    
+                    <div className="mt-6 flex space-x-4">
+                      <a href="#" className="text-hads-purple hover:text-hads-teal transition-colors">
+                        <Linkedin size={20} />
+                      </a>
+                      <a href="#" className="text-hads-purple hover:text-hads-teal transition-colors">
+                        <Twitter size={20} />
+                      </a>
+                      <a href="#" className="text-hads-purple hover:text-hads-teal transition-colors">
+                        <Mail size={20} />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Executive Team */}
+              <h3 className="text-2xl font-semibold text-center text-gray-800 mb-10">Executive Team</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                {[
+                  {
+                    name: "Sarah Johnson",
+                    title: "Chief Technology Officer",
+                    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2",
+                    bio: "Leading our technical strategy and innovation initiatives with 12+ years of cloud engineering experience."
+                  },
+                  {
+                    name: "Michael Chen",
+                    title: "Chief Operations Officer",
+                    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
+                    bio: "Overseeing global operations and ensuring service excellence across all client engagements."
+                  },
+                  {
+                    name: "Priya Patel",
+                    title: "VP of Client Success",
+                    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956",
+                    bio: "Dedicated to building lasting client relationships and ensuring their cloud journey exceeds expectations."
+                  }
+                ].map((exec, index) => (
+                  <div key={index} className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                    <div className="h-48 overflow-hidden">
+                      <img 
+                        src={exec.image} 
+                        alt={`${exec.name} portrait`} 
+                        className="w-full h-full object-cover object-center"
+                      />
+                    </div>
+                    <div className="p-6">
+                      <h4 className="text-xl font-semibold text-gray-900">{exec.name}</h4>
+                      <p className="text-hads-teal font-medium text-sm mb-3">{exec.title}</p>
+                      <p className="text-gray-600 text-sm">{exec.bio}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Strategic Partners - NEW */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+              <span className="text-gray-800">Our Strategic </span>
+              <span className="text-hads-pink">Partners</span>
+            </h2>
+            
+            <div className="max-w-5xl mx-auto bg-gray-50 rounded-2xl p-8 shadow-sm">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div className="flex flex-col items-center justify-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                  <img 
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1024px-Amazon_Web_Services_Logo.svg.png" 
+                    alt="AWS Logo" 
+                    className="h-16 mb-6 object-contain"
+                  />
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">AWS Partner Network</h3>
+                  <p className="text-gray-600 text-center">As a certified AWS partner, we leverage the full power of AWS's cloud ecosystem to deliver enterprise-grade solutions.</p>
+                </div>
+                
+                <div className="flex flex-col items-center justify-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                  <img 
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Google-cloud-platform.svg/2560px-Google-cloud-platform.svg.png" 
+                    alt="Google Cloud Logo" 
+                    className="h-16 mb-6 object-contain"
+                  />
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Google Cloud Partner</h3>
+                  <p className="text-gray-600 text-center">Our Google Cloud partnership enables us to build transformative solutions using Google's innovative technologies.</p>
+                </div>
+                
+                <div className="flex flex-col items-center justify-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                  <img 
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/2048px-Microsoft_logo.svg.png" 
+                    alt="Microsoft Logo" 
+                    className="h-16 mb-6 object-contain"
+                  />
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Microsoft Solutions Partner</h3>
+                  <p className="text-gray-600 text-center">We're certified to deploy and manage Microsoft Azure environments and integrate Microsoft services.</p>
+                </div>
+                
+                <div className="flex flex-col items-center justify-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                  <img 
+                    src="https://www.docker.com/wp-content/uploads/2022/03/horizontal-logo-monochromatic-white.png.webp" 
+                    alt="Docker Logo" 
+                    className="h-16 mb-6 object-contain bg-blue-600 p-2 rounded"
+                  />
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Docker Technology Partner</h3>
+                  <p className="text-gray-600 text-center">Our containerization expertise is backed by our partnership with Docker for seamless application deployment.</p>
+                </div>
+              </div>
+              
+              <div className="text-center mt-12">
+                <p className="text-gray-700 mb-6">We maintain close partnerships with industry leaders to ensure our clients benefit from cutting-edge technologies and best practices across their cloud journey.</p>
+                <Button className="bg-hads-purple hover:bg-hads-pink transition-colors">
+                  <Link to="/partners" className="text-white">Learn More About Our Partners</Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Mission and Values */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -123,6 +278,11 @@ const AboutPage = () => {
             </div>
           </div>
         </section>
+
+        {/* About Section from component */}
+        <div className="mt-8">
+          <AboutSection />
+        </div>
       </main>
 
       <Footer />

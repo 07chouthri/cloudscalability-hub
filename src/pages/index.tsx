@@ -87,10 +87,10 @@ const IndexPage = () => {
         <div id="professional-services" className="mt-8 md:mt-16">
           <ProfessionalCloudCarousel />
         </div>
-        <div id="global-coverage" className="mt-8 md:mt-16">
+        <div id="global-coverage" className="mt-4 md:mt-8">
           <GlobalCoverageSection />
         </div>
-        <div id="industries" className="mt-8 md:mt-16">
+        <div id="industries" className="mt-4 md:mt-8">
           <IndustriesSection />
         </div>
         <div id="resources" className="bg-white mt-8 md:mt-16">

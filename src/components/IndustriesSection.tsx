@@ -1,7 +1,8 @@
+
 import React, { useRef } from 'react';
 import { useInView } from '@/hooks/use-in-view';
 import { cn } from '@/lib/utils';
-import { Building } from 'lucide-react';
+import { Building, Stethoscope, LandmarkIcon, Code, ShoppingCart, GraduationCap, Factory, Building2, Radio, Zap } from 'lucide-react';
 
 const IndustriesSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -9,47 +10,47 @@ const IndustriesSection = () => {
 
   const industries = [
     {
-      icon: "🏥",
+      icon: <Stethoscope className="w-12 h-12 text-pink-500" />,
       name: "Healthcare",
       description: "Secure, compliant cloud solutions for hospitals, clinics, and medical research."
     },
     {
-      icon: "💰",
+      icon: <LandmarkIcon className="w-12 h-12 text-green-500" />,
       name: "Finance & Banking",
       description: "Reliable cloud infrastructure for banking apps, transactions, and analytics."
     },
     {
-      icon: "💻",
+      icon: <Code className="w-12 h-12 text-blue-500" />,
       name: "Information Technology",
       description: "DevOps, CI/CD, and scalable infrastructure tailored for tech companies."
     },
     {
-      icon: "🛒",
+      icon: <ShoppingCart className="w-12 h-12 text-orange-500" />,
       name: "Retail & E-Commerce",
       description: "Scalable e-commerce platforms, digital storefronts, and inventory automation."
     },
     {
-      icon: "🎓",
+      icon: <GraduationCap className="w-12 h-12 text-indigo-500" />,
       name: "Education & Research",
       description: "Cloud platforms for LMS, virtual classrooms, and academic data security."
     },
     {
-      icon: "🏭",
+      icon: <Factory className="w-12 h-12 text-gray-600" />,
       name: "Manufacturing & Industrial IoT",
       description: "IoT cloud integration, automation pipelines, and factory data management."
     },
     {
-      icon: "🏛️",
+      icon: <Building2 className="w-12 h-12 text-purple-500" />,
       name: "Government & Public Sector",
       description: "Secure, scalable solutions for digital governance and citizen services."
     },
     {
-      icon: "📡",
+      icon: <Radio className="w-12 h-12 text-cyan-500" />,
       name: "Telecommunications",
       description: "High-availability solutions for network infrastructure and communications."
     },
     {
-      icon: "⚡",
+      icon: <Zap className="w-12 h-12 text-yellow-500" />,
       name: "Energy & Utilities",
       description: "Real-time monitoring, smart grids, and analytics for sustainable operations."
     }
@@ -97,7 +98,7 @@ const IndustriesSection = () => {
               )}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <div className="text-5xl mb-4">{icon}</div>
+              <div className="mb-4 flex justify-center">{icon}</div>
               <h3 className="text-xl font-semibold text-hads-dark mb-2">{name}</h3>
               <p className="text-sm text-gray-600">{description}</p>
             </div>

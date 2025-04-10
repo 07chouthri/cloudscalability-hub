@@ -7,6 +7,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
+  DialogClose,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Shield, Check } from 'lucide-react';
@@ -28,8 +29,10 @@ const GetProtectedDialog = ({
   const navigate = useNavigate();
 
   const handleContactClick = () => {
-    // Close the dialog and navigate to contact page
-    navigate('/contact');
+    // Navigate to contact page with a slight delay to allow dialog close animation
+    setTimeout(() => {
+      navigate('/contact');
+    }, 100);
   };
 
   return (
@@ -80,9 +83,11 @@ const GetProtectedDialog = ({
               <p className="text-sm text-gray-500 mb-4">
                 Ready to secure your cloud infrastructure? Contact our security experts for a personalized consultation.
               </p>
-              <Button className="w-full" onClick={handleContactClick}>
-                Contact Security Team
-              </Button>
+              <DialogClose asChild>
+                <Button className="w-full" onClick={handleContactClick}>
+                  Contact Security Team
+                </Button>
+              </DialogClose>
             </div>
           </div>
         </div>

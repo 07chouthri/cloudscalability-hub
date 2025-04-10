@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useInView } from "@/hooks/use-in-view";
@@ -8,32 +8,23 @@ import Viedo_For_Home_Page from "../viedo/Home Page.mp4";
 import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = React.useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
+  const textRef = useRef<HTMLSpanElement>(null);
   const isInView = useInView(sectionRef, { once: true, threshold: 0.1 });
   const isMobile = useIsMobile();
-  const fullText = "Your strategic partner in cloud migration.";
-  const [displayedText, setDisplayedText] = useState("");
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Reset the displayed text when component mounts
-    setDisplayedText("");
+    // Create a CSS animation for the text instead of using state
+    const element = textRef.current;
+    if (!element) return;
     
-    let index = 0;
-    const timer = setInterval(() => {
-      if (index < fullText.length) {
-        setDisplayedText((prev) => prev + fullText[index]);
-        index++;
-      } else {
-        clearInterval(timer);
-      }
+    // Add a class that will trigger the CSS animation
+    setTimeout(() => {
+      element.classList.add('text-animated');
     }, 100);
 
-    return () => clearInterval(timer);
-  }, []);
-
-  useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
     }, 300);
@@ -93,10 +84,11 @@ const HeroSection = () => {
               Accelerate Your Cloud Journey with HADS
             </span>
             <span
-              className="block bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-blue-400 to-purple-500 
+              ref={textRef}
+              className="typed-text block bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-blue-400 to-purple-500 
               font-extrabold text-xl md:text-2xl lg:text-3xl"
             >
-              {displayedText || "Your strategic partner in cloud migration."}
+              Your strategic partner in cloud migration.
             </span>
             <span className="block text-lg md:text-xl lg:text-2xl mt-2 animate-fade-up"
                   style={{

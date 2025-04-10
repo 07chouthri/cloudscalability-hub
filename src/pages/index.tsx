@@ -39,6 +39,7 @@ const IndexPage = () => {
       const element = document.getElementById(id);
       if (element) {
         setTimeout(() => {
+          window.scrollTo(0, 0); // First scroll to top
           element.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }, 250);
       }
@@ -87,10 +88,11 @@ const IndexPage = () => {
         <div id="professional-services" className="mt-8 md:mt-16">
           <ProfessionalCloudCarousel />
         </div>
+        {/* Reordered: Global Coverage (Countries) now comes before Industries */}
         <div id="global-coverage" className="mt-4 md:mt-8">
           <GlobalCoverageSection />
         </div>
-        <div id="industries" className="mt-4 md:mt-8">
+        <div id="industries" className="mt-2 md:mt-4">
           <IndustriesSection />
         </div>
         <div id="resources" className="bg-white mt-8 md:mt-16">

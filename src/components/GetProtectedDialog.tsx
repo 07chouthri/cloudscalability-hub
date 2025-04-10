@@ -28,6 +28,7 @@ const GetProtectedDialog = ({
   const navigate = useNavigate();
 
   const handleContactClick = () => {
+    // Close the dialog and navigate to contact page
     navigate('/contact');
   };
 

@@ -17,6 +17,9 @@ const HeroSection = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    // Reset the displayed text when component mounts
+    setDisplayedText("");
+    
     let index = 0;
     const timer = setInterval(() => {
       if (index < fullText.length) {
@@ -93,7 +96,7 @@ const HeroSection = () => {
               className="block bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-blue-400 to-purple-500 
               font-extrabold text-xl md:text-2xl lg:text-3xl"
             >
-              {displayedText}
+              {displayedText || "Your strategic partner in cloud migration."}
             </span>
             <span className="block text-lg md:text-xl lg:text-2xl mt-2 animate-fade-up"
                   style={{

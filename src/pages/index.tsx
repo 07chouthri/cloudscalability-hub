@@ -88,7 +88,7 @@ const IndexPage = () => {
         <div id="professional-services" className="mt-8 md:mt-16">
           <ProfessionalCloudCarousel />
         </div>
-        {/* Reordered: Global Coverage (Countries) now comes before Industries */}
+        {/* Countries section now comes before Industries */}
         <div id="global-coverage" className="mt-4 md:mt-8">
           <GlobalCoverageSection />
         </div>

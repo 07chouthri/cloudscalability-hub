@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Shield, Check } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 interface GetProtectedDialogProps {
   variant?: "default" | "cloud" | "outline" | "ghost";
@@ -24,6 +25,12 @@ const GetProtectedDialog = ({
   className = "",
   mobileFullWidth = false
 }: GetProtectedDialogProps) => {
+  const navigate = useNavigate();
+
+  const handleContactClick = () => {
+    navigate('/contact');
+  };
+
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -72,7 +79,7 @@ const GetProtectedDialog = ({
               <p className="text-sm text-gray-500 mb-4">
                 Ready to secure your cloud infrastructure? Contact our security experts for a personalized consultation.
               </p>
-              <Button className="w-full" onClick={() => window.location.href = '/contact'}>
+              <Button className="w-full" onClick={handleContactClick}>
                 Contact Security Team
               </Button>
             </div>

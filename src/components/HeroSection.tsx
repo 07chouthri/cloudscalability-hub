@@ -5,6 +5,7 @@ import { ArrowRight } from "lucide-react";
 import { useInView } from "@/hooks/use-in-view";
 import { useIsMobile } from "@/hooks/use-mobile";
 import Viedo_For_Home_Page from "../viedo/Home Page.mp4";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -13,6 +14,7 @@ const HeroSection = () => {
   const isMobile = useIsMobile();
   const fullText = "Your strategic partner in cloud migration.";
   const [displayedText, setDisplayedText] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     let index = 0;
@@ -36,12 +38,7 @@ const HeroSection = () => {
   }, []);
 
   const handleGetStarted = () => {
-    const contactSection = document.getElementById("contact");
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" });
-    } else {
-      window.location.href = "/contact";
-    }
+    navigate("/contact");
   };
 
   return (

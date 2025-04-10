@@ -2,6 +2,7 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { useNavigate } from "react-router-dom";
 
 interface HeroContentProps {
   isVisible: boolean;
@@ -17,15 +18,11 @@ interface HeroContentProps {
  * - isVisible: boolean — controls visibility and animation entry of the content block.
  */
 const HeroContent = ({ isVisible }: HeroContentProps) => {
+  const navigate = useNavigate();
 
-  // Smooth scroll to the contact section or redirect to contact page if section not found
+  // Navigate to the contact page
   const handleGetStarted = () => {
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      window.location.href = '/contact';
-    }
+    navigate('/contact');
   };
 
   return (

@@ -1,4 +1,3 @@
-
 import { cn } from "@/lib/utils";
 import NavLogo from "./navbar/NavLogo";
 import DesktopNav from "./navbar/DesktopNav";
@@ -22,7 +21,8 @@ const Navbar = () => {
         className={cn(
           "fixed top-0 w-full z-50 transition-all duration-200 ease-in-out",
           isScrolled ? "bg-white shadow-md" : "bg-white/95 backdrop-blur-sm",
-          isVisible ? "translate-y-0" : "-translate-y-full")}
+          isVisible ? "translate-y-0" : "-translate-y-full")
+        }
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
           <div className="flex items-center justify-between h-16 sm:h-20">
@@ -35,16 +35,19 @@ const Navbar = () => {
               isMobileMenuOpen={isMobileMenuOpen}
               setIsMobileMenuOpen={setIsMobileMenuOpen}
               handleNavigation={handleNavigation}
+              isActive={isActive}
             />
           </div>
         </div>
 
-        <MobileNav
-          isOpen={isMobileMenuOpen}
-          setIsOpen={setIsMobileMenuOpen}
-          isActive={isActive}
-          handleNavigation={handleNavigation}
-        />
+        {!isMobileMenuOpen ? null : (
+          <MobileNav
+            isOpen={isMobileMenuOpen}
+            setIsOpen={setIsMobileMenuOpen}
+            isActive={isActive}
+            handleNavigation={handleNavigation}
+          />
+        )}
       </nav>
     </>
   );

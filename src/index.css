@@ -109,6 +109,7 @@
 .flip-card-back {
   transform: rotateY(180deg);
 }
+
 /* Scrollbar styling for WebKit browsers (Chrome, Edge, Safari) */
 ::-webkit-scrollbar {
   width: 8px;
@@ -141,10 +142,26 @@
   animation: typing 2s steps(40, end) forwards;
 }
 
-/* Responsive styles */
-@media (max-width: 640px) {
+/* Mobile menu improvements */
+@media (max-width: 768px) {
+  .mobile-menu-open {
+    overflow: hidden;
+  }
+  
+  .mobile-nav-sheet {
+    height: 100vh !important;
+    width: 100% !important;
+  }
+  
   .typed-text {
     font-size: 1.125rem;
   }
 }
 
+/* Fix for sheet content on mobile */
+@media (max-width: 640px) {
+  [data-radix-sheet-content] {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}

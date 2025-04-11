@@ -12,6 +12,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Shield, Check } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface GetProtectedDialogProps {
   variant?: "default" | "cloud" | "outline" | "ghost";
@@ -27,6 +28,7 @@ const GetProtectedDialog = ({
   mobileFullWidth = false
 }: GetProtectedDialogProps) => {
   const navigate = useNavigate();
+  const isMobile = useIsMobile();
 
   const handleContactClick = () => {
     // Navigate to contact page with a slight delay to allow dialog close animation
@@ -41,13 +43,13 @@ const GetProtectedDialog = ({
         <Button
           variant={variant}
           size={size}
-          className={`${className} ${mobileFullWidth ? 'w-full md:w-auto' : ''} flex items-center`}
+          className={`${className} ${mobileFullWidth ? 'w-full md:w-auto' : ''} flex items-center gap-2`}
         >
-          <Shield className="mr-2" size={16} />
+          <Shield size={isMobile ? 16 : 18} />
           Get Protected
         </Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-md mx-4 sm:mx-auto max-h-[90vh] overflow-y-auto">
+      <DialogContent className="sm:max-w-md max-w-[95vw] mx-auto max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="text-xl flex items-center">
             <Shield className="mr-2 text-hads-purple" size={20} />

@@ -16,10 +16,10 @@ const MobileNav = ({ isOpen, setIsOpen, isActive, handleNavigation }: MobileNavP
   const closeMenu = () => setIsOpen(false);
   
   return (
-    <div className="h-full flex flex-col py-6 px-4">
+    <div className="h-full flex flex-col py-6 px-4 bg-white">
       <div className="flex items-center justify-between mb-6">
         <Link to="/" className="flex items-center gap-2" onClick={closeMenu}>
-          <div className="h-12 w-auto"> 
+          <div className="h-10 w-auto"> 
             <img 
               src="/lovable-uploads/f1d950f6-05d5-4bdd-9e1c-84621cd7e7a4.png" 
               alt="HADS Logo" 
@@ -32,7 +32,7 @@ const MobileNav = ({ isOpen, setIsOpen, isActive, handleNavigation }: MobileNavP
           onClick={closeMenu}
           aria-label="Close menu"
         >
-          <X className="h-6 w-6" />
+          <X className="h-5 w-5" />
         </button>
       </div>
       

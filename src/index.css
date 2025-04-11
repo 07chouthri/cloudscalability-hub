@@ -165,3 +165,14 @@
     max-width: 100% !important;
   }
 }
+
+/* Additional responsive fixes */
+@media (max-width: 480px) {
+  .h-16 {
+    height: 3.5rem !important;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+}

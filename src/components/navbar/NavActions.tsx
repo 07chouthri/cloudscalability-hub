@@ -31,17 +31,19 @@ const NavActions = ({
         <GetProtectedDialog />
       </div>
       
-      {/* Replace the regular button with Sheet component for better mobile UX */}
+      {/* Use Sheet component for better mobile UX */}
       <Sheet>
         <SheetTrigger asChild>
-          <button
-            className="p-2 rounded-md bg-gray-100 hover:bg-gray-200 transition-colors md:hidden"
+          <Button
+            variant="outline"
+            size="icon"
+            className="md:hidden border border-gray-200"
             aria-label="Toggle mobile menu"
           >
-            <Menu className="h-6 w-6 text-gray-800" />
-          </button>
+            <Menu className="h-5 w-5 text-gray-800" />
+          </Button>
         </SheetTrigger>
-        <SheetContent side="right" className="p-0 w-full sm:max-w-md">
+        <SheetContent side="right" className="p-0 w-full sm:max-w-md mobile-nav-sheet">
           <MobileNav 
             isOpen={true}
             setIsOpen={setIsMobileMenuOpen}

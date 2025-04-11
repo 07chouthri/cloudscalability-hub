@@ -43,7 +43,7 @@ const NavActions = ({
             <Menu className="h-5 w-5 text-gray-800" />
           </Button>
         </SheetTrigger>
-        <SheetContent side="right" className="p-0 w-full sm:max-w-md mobile-nav-sheet">
+        <SheetContent side="right" className="p-0 w-full sm:max-w-md">
           <MobileNav 
             isOpen={true}
             setIsOpen={setIsMobileMenuOpen}

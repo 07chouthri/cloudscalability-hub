@@ -31,7 +31,7 @@ const NavActions = ({
         <GetProtectedDialog />
       </div>
       
-      {/* Use Sheet component for better mobile UX */}
+      {/* Mobile menu trigger */}
       <Sheet>
         <SheetTrigger asChild>
           <Button

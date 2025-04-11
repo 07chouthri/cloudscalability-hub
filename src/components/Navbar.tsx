@@ -1,3 +1,4 @@
+
 import { cn } from "@/lib/utils";
 import NavLogo from "./navbar/NavLogo";
 import DesktopNav from "./navbar/DesktopNav";
@@ -23,8 +24,8 @@ const Navbar = () => {
           isScrolled ? "bg-white shadow-md" : "bg-white/95 backdrop-blur-sm",
           isVisible ? "translate-y-0" : "-translate-y-full")}
       >
-        <div className="container max-w-7xl mx-auto px-4">
-          <div className="flex items-center justify-between h-[5rem]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+          <div className="flex items-center justify-between h-16 sm:h-20">
             <NavLogo />
             <DesktopNav
               isActive={isActive}

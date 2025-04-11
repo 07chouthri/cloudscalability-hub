@@ -122,3 +122,29 @@
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
+
+/* Typing animation for hero section */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+.typed-text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  opacity: 1 !important;
+  width: 0;
+}
+
+.typed-text.text-animated {
+  animation: typing 2s steps(40, end) forwards;
+}
+
+/* Responsive styles */
+@media (max-width: 640px) {
+  .typed-text {
+    font-size: 1.125rem;
+  }
+}
+

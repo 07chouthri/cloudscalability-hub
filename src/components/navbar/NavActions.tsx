@@ -9,7 +9,7 @@ interface NavActionsProps {
   handleNavigation: (path: string, sectionId?: string) => void;
 }
 
-const NavActions = ({ isMobileMenuOpen, setIsMobileMenuOpen }: NavActionsProps) => {
+const NavActions = ({ isMobileMenuOpen, setIsMobileMenuOpen, handleNavigation }: NavActionsProps) => {
   return (
     <div className="flex items-center space-x-3">
       <div className="hidden md:block">

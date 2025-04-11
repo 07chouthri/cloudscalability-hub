@@ -24,7 +24,7 @@ const MobileNav = ({ isOpen, setIsOpen, isActive, handleNavigation }: MobileNavP
       <div className="p-4 h-full flex flex-col">
         <div className="flex items-center justify-between mb-6">
           <Link to="/" className="flex items-center gap-2" onClick={closeMenu}>
-            <div className="h-16 w-auto"> 
+            <div className="h-12 w-auto"> 
               <img 
                 src="/lovable-uploads/f1d950f6-05d5-4bdd-9e1c-84621cd7e7a4.png" 
                 alt="HADS Logo" 
@@ -43,7 +43,7 @@ const MobileNav = ({ isOpen, setIsOpen, isActive, handleNavigation }: MobileNavP
           </button>
         </div>
         
-        <div className="flex-grow overflow-y-auto">
+        <div className="flex-grow overflow-y-auto pb-20">
           <div className="flex flex-col space-y-3">
             <Link 
               to="/"
@@ -51,7 +51,7 @@ const MobileNav = ({ isOpen, setIsOpen, isActive, handleNavigation }: MobileNavP
                 handleNavigation('/');
                 closeMenu();
               }}
-              className={cn("py-2 px-4 text-base font-medium text-gray-800 hover:bg-gray-100 rounded-lg transition-colors text-left", 
+              className={cn("py-3 px-4 text-base font-medium text-gray-800 hover:bg-gray-100 rounded-lg transition-colors text-left", 
                 isActive('/') && "text-hads-pink bg-gray-100"
               )}
             >
@@ -63,7 +63,7 @@ const MobileNav = ({ isOpen, setIsOpen, isActive, handleNavigation }: MobileNavP
                 handleNavigation('/about');
                 closeMenu();
               }}
-              className={cn("py-2 px-4 text-base font-medium text-gray-800 hover:bg-gray-100 rounded-lg transition-colors text-left",
+              className={cn("py-3 px-4 text-base font-medium text-gray-800 hover:bg-gray-100 rounded-lg transition-colors text-left",
                 isActive('/about') && "text-hads-pink bg-gray-100"
               )}
             >
@@ -82,7 +82,7 @@ const MobileNav = ({ isOpen, setIsOpen, isActive, handleNavigation }: MobileNavP
                       closeMenu();
                     }}
                     className={cn(
-                      "py-1 px-3 text-sm rounded transition-colors flex items-center gap-2",
+                      "py-2 px-3 text-sm rounded transition-colors flex items-center gap-2",
                       isActive(item.path) 
                         ? "text-hads-pink bg-gray-50" 
                         : "text-gray-600 hover:text-hads-pink"
@@ -101,7 +101,7 @@ const MobileNav = ({ isOpen, setIsOpen, isActive, handleNavigation }: MobileNavP
                 handleNavigation('/partners');
                 closeMenu();
               }}
-              className={cn("py-2 px-4 text-base font-medium text-gray-800 hover:bg-gray-100 rounded-lg transition-colors text-left",
+              className={cn("py-3 px-4 text-base font-medium text-gray-800 hover:bg-gray-100 rounded-lg transition-colors text-left",
                 isActive('/partners') && "text-hads-pink bg-gray-100"
               )}
             >
@@ -113,7 +113,7 @@ const MobileNav = ({ isOpen, setIsOpen, isActive, handleNavigation }: MobileNavP
                 handleNavigation('/contact');
                 closeMenu();
               }}
-              className={cn("py-2 px-4 text-base font-medium text-gray-800 hover:bg-gray-100 rounded-lg transition-colors text-left", 
+              className={cn("py-3 px-4 text-base font-medium text-gray-800 hover:bg-gray-100 rounded-lg transition-colors text-left", 
                 isActive('/contact') && "text-hads-pink bg-gray-100"
               )}
             >
@@ -122,7 +122,7 @@ const MobileNav = ({ isOpen, setIsOpen, isActive, handleNavigation }: MobileNavP
           </div>
         </div>
         
-        <div className="mt-6 pt-6 border-t border-gray-200">
+        <div className="mt-6 pt-6 border-t border-gray-200 sticky bottom-0 bg-white">
           <GetProtectedDialog mobileFullWidth={true} />
         </div>
       </div>

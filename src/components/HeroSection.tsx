@@ -40,28 +40,27 @@ const HeroSection = () => {
       ref={sectionRef}
       className="relative mt-5 w-full min-h-[calc(100vh-5rem)] flex items-center justify-start bg-black overflow-hidden rounded-lg md:rounded-2xl"
     >
-      {/* Background Video - Updated for fullscreen display */}
+      {/* Background Video - Updated for responsive display */}
       <video
         src={Viedo_For_Home_Page}
         autoPlay
         loop
         muted
         playsInline
-        className="absolute top-0 left-0 w-full h-full z-0"
-        style={{marginLeft:"200px"}}
+        className="absolute top-0 left-0 w-full h-full object-cover z-0"
       />
 
       {/* Dark overlay for readability */}
-      <div className="absolute inset-0 bg-opacity-50 z-10"></div>
+      <div className="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
 
       <div
-        className={`z-20 px-6 md:pl-12 md:pr-6 text-left text-white max-w-full md:max-w-3xl transition-all duration-1000 ${
+        className={`z-20 px-4 sm:px-6 md:pl-12 md:pr-6 text-left text-white max-w-full md:max-w-3xl transition-all duration-1000 ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
         {/* Tagline with fade-up */}
         <div
-          className="inline-block mb-6 px-3 py-1 bg-white/10 border border-white/20 rounded-full 
+          className="inline-block mb-4 sm:mb-6 px-3 py-1 bg-white/10 border border-white/20 rounded-full 
           text-xs md:text-sm font-medium uppercase tracking-wider backdrop-blur-sm animate-fade-up"
           style={{
             animationDelay: "0.2s",
@@ -74,7 +73,7 @@ const HeroSection = () => {
 
         {/* Heading and description */}
         <div className="flex flex-col items-start text-left p-0">
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-4 animate-fade-up"
+          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-3 sm:mb-4 animate-fade-up"
               style={{
                 animationDelay: "0.4s",
                 opacity: 0,
@@ -86,11 +85,11 @@ const HeroSection = () => {
             <span
               ref={textRef}
               className="typed-text block bg-clip-text text-transparent bg-gradient-to-r from-teal-400 via-blue-400 to-purple-500 
-              font-extrabold text-xl md:text-2xl lg:text-3xl"
+              font-extrabold text-lg sm:text-xl md:text-2xl lg:text-3xl"
             >
               Your strategic partner in cloud migration.
             </span>
-            <span className="block text-lg md:text-xl lg:text-2xl mt-2 animate-fade-up"
+            <span className="block text-base sm:text-lg md:text-xl lg:text-2xl mt-2 animate-fade-up"
                   style={{
                     animationDelay: "0.8s",
                     opacity: 0,
@@ -100,7 +99,7 @@ const HeroSection = () => {
             </span>
           </h1>
           <p
-            className="text-sm md:text-base lg:text-lg text-gray-200 max-w-full md:max-w-lg leading-relaxed mb-6 animate-fade-up"
+            className="text-sm md:text-base lg:text-lg text-gray-200 max-w-full md:max-w-lg leading-relaxed mb-5 sm:mb-6 animate-fade-up"
             style={{
               animationDelay: "1s",
               opacity: 0,
@@ -119,7 +118,7 @@ const HeroSection = () => {
             onClick={handleGetStarted}
             variant="cloud"
             size={isMobile ? "default" : "hero"}
-            className="animate-fade-up"
+            className="animate-fade-up w-full sm:w-auto"
             style={{
               animationDelay: "1.2s",
               animationFillMode: "forwards",

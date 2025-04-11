@@ -47,7 +47,7 @@ const GetProtectedDialog = ({
           Get Protected
         </Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-md">
+      <DialogContent className="sm:max-w-md mx-4 sm:mx-auto max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="text-xl flex items-center">
             <Shield className="mr-2 text-hads-purple" size={20} />

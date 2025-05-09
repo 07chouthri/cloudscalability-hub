@@ -66,9 +66,6 @@ const Footer = () => {
               <Link to="/about" className="text-gray-600 hover:text-hads-teal hover:underline hover:decoration-sky-500 transition-colors flex items-center" onClick={handleNavigation}>
                 <span className="mr-1">About Us</span>
               </Link>
-              <Link to="/cloud-migration" className="text-gray-600 hover:text-hads-teal hover:underline hover:decoration-sky-500 transition-colors flex items-center" onClick={handleNavigation}>
-                <span className="mr-1">Services</span>
-              </Link>
               <Link to="/partners" className="text-gray-600 hover:text-hads-teal hover:underline hover:decoration-sky-500 transition-colors flex items-center" onClick={handleNavigation}>
                 <span className="mr-1">Partner</span>
               </Link>

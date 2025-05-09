@@ -151,7 +151,7 @@ const ContactPage = () => {
                       <option>Managed Services</option>
                       <option>DevOps & Automation</option>
                       <option>Security & Compliance</option>
-                      <option>Cost Optimization</option>
+                      <option>Cost Optimization(CyberSecurity)</option>
                       <option>Other</option>
                     </select>
                   </div>

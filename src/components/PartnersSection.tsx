@@ -35,7 +35,7 @@ const PartnersSection = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="bg-white sm:py-8 md:py-16 relative overflow-hidden">
+    <section ref={sectionRef} className="bg-white sm:py-8 md:py-10 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 dots-pattern opacity-5"></div>
       <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-b from-hads-purple/5 to-transparent opacity-30 blur-3xl"></div>

@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Shield, Lock, FileCheck, ServerCrash, Database, Globe, ShieldCheck, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import SecurityCompliance from '../images/servicesimages/Security CompliancePage.jpg';
+import SecurityCompliance from '../images/servicesimages/Security CompliancePage.png';
 import SEOHead from '@/components/SEOHead';
 
 
@@ -134,11 +134,10 @@ const SecurityCompliancePage = () => {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                width: "100%",
-                padding: "1rem",
+                width: "50%",
               }}
             >
-              <div style={{ width: "100%", maxWidth: 600 }}>
+              <div style={{ width: "100%", maxWidth: 500 }}>
                 <img
                   src={SecurityCompliance}
                   alt="Cloud technology illustration"
@@ -160,7 +159,6 @@ const SecurityCompliancePage = () => {
                 flexDirection: "column",
                 justifyContent: "center",
                 color: "black",
-                zIndex: 2,
                 textAlign: isMobile ? "center" : "left",
               }}
             >
@@ -467,10 +465,10 @@ const SecurityCompliancePage = () => {
 
 
         {/* Compliance Frameworks */}
-        <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <section className="py-5 bg-gradient-to-b from-gray-50 to-white">
           <div className="container mx-auto px-4">
             {/* Section Header */}
-            <div className="max-w-3xl mx-auto text-center mb-16">
+            <div className="max-w-3xl mx-auto text-center mb-5">
               <h2 className="text-4xl font-extrabold text-hads-dark mb-4 tracking-tight">
                 <span className="text-gray-800">Compliance </span>
                 <span className="text-hads-pink">Frameworks</span>
@@ -506,7 +504,7 @@ const SecurityCompliancePage = () => {
 
 
             {/* CTA Button */}
-            <div className="text-center mt-16">
+            <div className="text-center mt-4">
               <Link to="/contact">
                 <Button
                   variant="default"

@@ -15,6 +15,7 @@ const AppDevelopmentPage = () => {
     return (
         <div className="min-h-screen flex flex-col bg-white">
             <Navbar />
+
             {/* Hero Banner */}
             <div className="bg-gradient-to-r from-hads-dark via-hads-purple to-hads-dark text-white py-24">
                 <div className="container mx-auto px-4">

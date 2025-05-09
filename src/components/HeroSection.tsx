@@ -9,7 +9,8 @@ import Viedo_For_Home_Page_Mobile from "../video/Home Page Mobile.mp4";
 
 const HeroSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const videoDesktopRef = useRef<HTMLVideoElement>(null);
+  const videoMobileRef = useRef<HTMLVideoElement>(null);
   const isInView = useInView(sectionRef, { once: true, threshold: 0.1 });
   const { isMobile, isTablet } = useResponsive();
   const [isVisible, setIsVisible] = useState(false);
@@ -17,9 +18,11 @@ const HeroSection = () => {
 
   // Toggle mute state
   const toggleMute = () => {
-    if (videoRef.current) {
-      // Toggle the mute state directly on the video element
-      videoRef.current.muted = !videoRef.current.muted;
+    if (videoDesktopRef.current && videoMobileRef.current) {
+      const videoElements = [videoDesktopRef.current, videoMobileRef.current];
+      videoElements.forEach(video => {
+        video.muted = !video.muted;
+      });
       // Update the state with the new mute status
       setIsMuted(!isMuted);
     }
@@ -88,11 +91,11 @@ const HeroSection = () => {
       </style>
       <div
         ref={sectionRef}
-        className="relative w-full min-h-[calc(100vh-5rem)] mt-[80px] pt-[60px] pb-[60px] flex items-center justify-start bg-black overflow-hidden rounded-lg md:rounded-2xl"
+        className="relative w-full min-h-[calc(100vh-10rem)] mt-[80px] pt-[60px] pb-[60px] flex items-center justify-start bg-black overflow-hidden rounded-lg md:rounded-2xl"
       >
         {/* Background Video - Show on all devices */}
         <video
-          ref={videoRef}
+          ref={videoDesktopRef}
           src={Viedo_For_Home_Page_Desktop}
           autoPlay
           loop
@@ -103,7 +106,7 @@ const HeroSection = () => {
 
         {/* Background Video - Show only on mobile */}
         <video
-          ref={videoRef}
+          ref={videoMobileRef}
           src={Viedo_For_Home_Page_Mobile}
           autoPlay
           loop

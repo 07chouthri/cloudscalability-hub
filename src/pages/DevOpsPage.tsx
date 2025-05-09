@@ -142,7 +142,7 @@ const DevOpsPage = () => {
         </section>
 
         {/* DevOps Transformation */}
-        <section className="py-12 md:py-16 bg-gray-50">
+        <section className="py-5 md:py-5 bg-gray-50">
           <div className="container mx-auto px-4 md:px-8">
             <div className="max-w-3xl mx-auto mb-10 md:mb-12 text-center">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
@@ -191,7 +191,7 @@ const DevOpsPage = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-12 md:py-16 bg-white">
+        <section className="py-5 md:py-5 bg-white">
           <div className="container mx-auto px-4 md:px-8">
             {/* Section Header */}
             <div className="max-w-3xl mx-auto mb-10 md:mb-12 text-center">

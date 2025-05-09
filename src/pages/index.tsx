@@ -141,32 +141,32 @@ const IndexPage = () => {
       {/* </div> */}
       
       <main className="relative z-10 bg-white pt-8 md:pt-16 px-4 md:px-6 lg:px-8">
-        <div id="services" className="mt-4 md:mt-8 lg:mt-16">
+        <div id="services">
           <ServicesSection />
         </div>
-        <div id="roadmap" className="mt-6 md:mt-8 lg:mt-16">
+        <div id="roadmap">
           <EnhancedCloudRoadmap />
         </div>
         {/* Countries section now comes before Industries */}
-        <div id="global-coverage" className="mt-4 md:mt-8">
+        <div id="global-coverage">
           <GlobalCoverageSection />
         </div>
-        <div id="industries" className="mt-2 md:mt-4">
+        <div id="industries">
           <IndustriesSection />
         </div>
-        <div id="resources" className="mt-6 md:mt-8 lg:mt-16">
+        <div id="resources">
           <ResourcesSection />
         </div>
-        <div id="about" className="mt-6 md:mt-8 lg:mt-16">
+        <div id="about"className="mt-10">
           <AboutSection />
         </div>
-        <div id="partners" className="mt-6 md:mt-8 lg:mt-16">
+        <div id="partners">
           <PartnersSection />
         </div>
-        <div id="stats" className="mt-6 md:mt-8 lg:mt-16">
+        <div id="stats" className="mt-10">
           <StatsSection />
         </div>
-        <div id="testimonials" className="mt-6 md:mt-8 lg:mt-16 mb-6 md:mb-8 lg:mb-16">
+        <div id="testimonials" className="mt-10">
           <TestimonialsSection />
         </div>
       </main>

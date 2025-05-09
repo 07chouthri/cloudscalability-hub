@@ -130,7 +130,7 @@ const ContainerizationPage = () => {
       <main className="flex-grow">
         <section>
           <div className="container mx-auto px-4 md:px-8">
-            <div className="flex flex-col md:flex-row items-center min-h-[80vh] py-12">
+            <div className="flex flex-col md:flex-row items-center min-h-[70vh] py-10">
               {/* Image Column */}
               <div className="w-full md:w-1/2 flex justify-center mb-10 md:mb-0">
                 <div className="max-w-[350px] md:max-w-[500px]">
@@ -293,7 +293,7 @@ const ContainerizationPage = () => {
         </section>
 
         {/* Services Tab Section */}
-        <section className="py-12 md:py-16 bg-gray-50">
+        <section className="py-5 md:py-5 bg-gray-50">
           <div className="container mx-auto px-4 md:px-8">
             {/* Header */}
             <div className="text-center mb-10 md:mb-12">

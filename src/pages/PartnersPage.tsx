@@ -126,7 +126,7 @@ const PartnersPage = () => {
         <PartnersSection />
 
         {/* Why Partner With Us */}
-        <section className="py-8 sm:py-10 md:py-16 bg-white">
+        <section className=" sm:py-5 md:py-5 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto mb-6 md:mb-12 text-center">
               <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-3 md:mb-6">
@@ -216,7 +216,7 @@ const PartnersPage = () => {
         </section>
 
         {/* Technology Logos */}
-        <section className="py-8 sm:py-10 md:py-16 bg-gray-50 overflow-hidden">
+        <section className="py-5 sm:py-5 md:py-5 bg-gray-50 overflow-hidden">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto mb-6 md:mb-12 text-center">
               <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-3 md:mb-4">

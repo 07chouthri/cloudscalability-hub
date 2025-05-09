@@ -46,7 +46,7 @@ const AboutSection = () => {
           ))}
         </div>
 
-        <div className="text-center mb-8 md:mb-12" style={{ marginTop: isMobile ? "80px" : "160px" }}>
+        <div className="text-center mb-8 md:mb-5" style={{ marginTop: isMobile ? "80px" : "60px" }}>
           <h3 className="text-2xl md:text-3xl font-bold text-hads-dark mb-3 md:mb-4">
             Our Core <span className="mx-2 text-hads-pink">Value</span>
           </h3>
@@ -55,7 +55,7 @@ const AboutSection = () => {
           </p>
 
           {/* Grid */}
-          <div className="p-4 md:p-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 mt-4 md:mt-8">
+          <div className="p-4 md:p-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 mt-3 md:mt-5">
             {/* Card 1 */}
             <div className="bg-gradient-to-r from-hads-purple to-hads-pink p-4 md:p-6 rounded-lg shadow-lg">
               <div className="w-10 h-10 md:w-12 md:h-12 mb-3 md:mb-4 rounded-full bg-white/20 flex items-center justify-center">
@@ -125,7 +125,7 @@ const AboutSection = () => {
         </div>
 
         {/* Feature Cards */}
-        <div className="mt-6 md:mt-10 text-center mb-8 md:mb-12" style={{ marginTop: isMobile ? "60px" : "160px" }}>
+        <div className="mt-6 md:mt-10 text-center mb-8 md:mb-12" style={{ marginTop: isMobile ? "60px" : "40px" }}>
           <h3 className="text-2xl md:text-3xl font-bold text-hads-dark mb-3 md:mb-4">Why Choose <span className="text-hads-pink">HADS?</span></h3>
           <p className="text-base md:text-lg text-hads-dark/80 max-w-2xl mx-auto">Our cloud-first mindset and elite engineers bring measurable business impact, not just tech talk.</p>
 

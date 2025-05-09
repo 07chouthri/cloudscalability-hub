@@ -28,7 +28,7 @@ export const serviceItems = [
   },
   {
     icon: Shield,
-    title: "Security & Compliance",
+    title: "Security & Compliance (CyberSecurity)",
     description: "Ensure robust protection with enterprise-grade security",
     path: "/security-compliance"
   }

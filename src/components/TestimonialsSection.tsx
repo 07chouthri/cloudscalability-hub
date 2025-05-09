@@ -91,7 +91,7 @@ const TestimonialsSection = () => {
   }, [api]);
 
   return (
-    <section ref={sectionRef} className="bg-white relative overflow-hidden">
+    <section ref={sectionRef} className="p-[20px] bg-white relative overflow-hidden">
       <div className="container max-w-7xl mx-auto px-4 relative z-10">
         <div className="mb-16 text-center">
           <h2

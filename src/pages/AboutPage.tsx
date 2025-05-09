@@ -39,7 +39,7 @@ const AboutPage = () => {
       />
       
       <Navbar />
-      <main className="flex-grow pt-16 md:pt-20">
+      <main className="flex-grow md:pt-20">
         {/* Hero Section */}
         <section className="relative py-8 sm:py-10 md:py-12 lg:py-20 bg-gradient-to-r from-hads-dark via-hads-purple to-hads-dark overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-hads-dark via-hads-purple to-hads-dark opacity-70"></div>
@@ -78,7 +78,7 @@ const AboutPage = () => {
         </section>
 
         {/* Company Overview */}
-        <section className="py-8 sm:py-10 md:py-16 bg-white shadow-lg rounded-lg mt-4 sm:mt-6 md:mt-8">
+        <section className="sm:py-5 md:py-5 bg-white shadow-lg rounded-lg mt-4 sm:mt-6 md:mt-8">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 md:mb-6 tracking-wide">
@@ -96,7 +96,7 @@ const AboutPage = () => {
         </section>
 
         {/* Mission and Values */}
-        <section className="py-8 sm:py-10 md:py-16 bg-gray-50">
+        <section className="py-5 sm:py-5 md:py-5 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto mb-6 sm:mb-8 md:mb-12 text-center">
               <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-3 sm:mb-4 md:mb-6 tracking-wide">

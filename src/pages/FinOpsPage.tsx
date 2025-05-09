@@ -146,7 +146,7 @@ const FinOpsPage = () => {
         </section>
 
         {/* ROI Section */}
-        <section className="py-12 md:py-16 bg-gray-50">
+        <section className="py-5 md:py-5 bg-gray-50">
           <div className="container mx-auto px-4 md:px-8">
             <div className="max-w-3xl mx-auto mb-10 md:mb-12 text-center">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
@@ -176,7 +176,7 @@ const FinOpsPage = () => {
             </div>
 
             {/* FinOps Steps */}
-            <div className="mt-12 md:mt-20 max-w-6xl mx-auto bg-white p-6 md:p-10 rounded-xl md:rounded-2xl shadow-lg border border-gray-100">
+            <div className="mt-5 md:mt-10 max-w-6xl mx-auto bg-white p-6 md:p-10 rounded-xl md:rounded-2xl shadow-lg border border-gray-100">
               <h3 className="text-2xl md:text-3xl font-bold text-hads-dark mb-8 md:mb-10 text-center">
                 <span className="text-gray-800">Our </span>
                 <span className="text-hads-pink">FinOps</span>

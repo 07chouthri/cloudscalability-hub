@@ -72,9 +72,8 @@ const CloudMigrationPage = () => {
 const HeroSection = () => {
   return (
     <main className="flex-grow pt-10 md:pt-0">
-      <section className="min-h-screen flex items-center justify-center">
+      <section className="mt-[50px] h-[500px] flex items-center justify-center">
         <div className="container px-4 md:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
-          
           {/* Image section */}
           <div className="w-full md:w-1/2 flex justify-center items-center">
             <div className="w-full max-w-xs sm:max-w-sm md:max-w-md">
@@ -104,7 +103,6 @@ const HeroSection = () => {
               Our experts assess, plan, and execute a migration strategy tailored to your business goals.
             </p>
           </div>
-
         </div>
       </section>
     </main>
@@ -116,7 +114,7 @@ const StrategyOverview = () => {
   const isInView = useInView(sectionRef, { once: true, threshold: 0.2 });
 
   return (
-    <section ref={sectionRef} className="bg-white py-12 md:py-16 lg:py-24">
+    <section ref={sectionRef} className="bg-white py-5 md:py-5 lg:py-5">
       <div className="container mx-auto px-4 md:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className={cn(
@@ -183,7 +181,7 @@ const FocusAreasSection = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="py-12 md:py-16 lg:py-20 bg-gray-50">
+    <section ref={sectionRef} className="py-5 md:py-5 lg:py-5 bg-gray-50">
       <div className="container mx-auto px-4 md:px-8">
         <div className="text-center mb-10 md:mb-16">
           <h2 className={cn(
@@ -272,7 +270,7 @@ const CloudPlatformsSection = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="py-12 md:py-16 lg:py-24 bg-white">
+    <section ref={sectionRef} className="py-5 md:py-5 lg:py-5 bg-white">
       <div className="container mx-auto px-4 md:px-8">
         {/* Title Section */}
         <div className="text-center mb-10 md:mb-16 lg:mb-20">
@@ -405,7 +403,7 @@ const MigrationProcessSection = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="py-12 md:py-16 lg:py-20 bg-gray-50">
+    <section ref={sectionRef} className="py-5 md:py-5 lg:py-5 bg-gray-50">
       <div className="container mx-auto px-4 md:px-8">
         <div className="text-center mb-10 md:mb-16">
           <h2 className={cn(

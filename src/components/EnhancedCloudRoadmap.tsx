@@ -108,7 +108,7 @@ const EnhancedCloudRoadmap = () => {
   return (
     <section 
       ref={roadmapRef} 
-      className="py-10 md:py-40 rounded-[20px] bg-gradient-to-b from-hads-dark to-hads-purple/90 overflow-hidden relative"
+      className=" md:py-10 rounded-[20px] bg-gradient-to-b from-hads-dark to-hads-purple/90 overflow-hidden relative"
     >
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center mb-10 md:mb-16">

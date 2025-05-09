@@ -1,0 +1,13 @@
+
+User-agent: *
+Allow: /
+Allow: /cloud-migration
+Allow: /contact
+Allow: /finops
+Allow: /devops
+Allow: /cloud-managed-services
+Allow: /security-compliance
+Allow: /about
+Allow: /services/data-analytics
+
+Sitemap: https://hads.tech/sitemap.xml

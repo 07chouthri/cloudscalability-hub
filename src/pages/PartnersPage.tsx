@@ -28,14 +28,14 @@ const PartnersPage = () => {
     "description": "Explore HADS TechNovations LLP ' strategic partnerships with industry leaders in cloud technology and solutions.",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://hads.tech/partners"
+      "@id": "https://www.hadstechnovations.com/partners"
     },
     "publisher": {
       "@type": "Organization",
       "name": "HADS TechNovations LLP",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://hads.tech/logo.png"
+        "url": "https://www.hadstechnovations.com/logo.png"
       }
     }
   };

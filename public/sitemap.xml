@@ -2,47 +2,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://hads.tech/</loc>
+    <loc>https://www.hadstechnovations.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://hads.tech/about</loc>
+    <loc>https://www.hadstechnovations.com/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hads.tech/cloud-migration</loc>
+    <loc>https://www.hadstechnovations.com/cloud-migration</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hads.tech/contact</loc>
+    <loc>https://www.hadstechnovations.com/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://hads.tech/finops</loc>
+    <loc>https://www.hadstechnovations.com/finops</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hads.tech/devops</loc>
+    <loc>https://www.hadstechnovations.com/devops</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hads.tech/cloud-managed-services</loc>
+    <loc>https://www.hadstechnovations.com/cloud-managed-services</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hads.tech/security-compliance</loc>
+    <loc>https://www.hadstechnovations.com/security-compliance</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hads.tech/services/data-analytics</loc>
+    <loc>https://www.hadstechnovations.com/partners</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

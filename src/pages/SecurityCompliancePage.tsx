@@ -20,7 +20,7 @@ const SecurityCompliancePage = () => {
     "provider": {
       "@type": "Organization",
       "name": "HADS Technovations LLP",
-      "url": "https://hads.tech"
+      "url": "https://www.hadstechnovations.com/"
     },
     "serviceType": "Security & Compliance",
     "areaServed": {
@@ -36,7 +36,7 @@ const SecurityCompliancePage = () => {
     "mainEntityOfPage": {
       "@type": "WebPage",
       "lastReviewed": "2023-10-05",
-      "@id": "https://hads.tech/security-compliance"
+      "@id": "https://www.hadstechnovations.com/security-compliance"
     },
     "aggregateRating": {
       "@type": "AggregateRating",
@@ -47,12 +47,12 @@ const SecurityCompliancePage = () => {
       {
         "@type": "Service",
         "name": "Cloud Migration Services",
-        "url": "https://hads.tech/cloud-migration"
+        "url": "https://www.hadstechnovations.com/cloud-migration"
       },
       {
         "@type": "Service",
         "name": "Cloud Managed Services",
-        "url": "https://hads.tech/cloud-managed-services"
+        "url": "https://www.hadstechnovations.com/cloud-managed-services"
       }
     ]
   };

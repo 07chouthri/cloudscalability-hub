@@ -1,5 +1,3 @@
-
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {
@@ -14,12 +12,12 @@ interface SEOHeadProps {
 const SEOHead = ({
   title,
   description,
-  keywords = 'cloud solutions, cloud migration, DevOps, FinOps, cloud security, cloud management',
-  ogImage = '/logo.png',
+  keywords = 'HADS, HADS Technovations LLP, HADS Cloud Solutions, HADS DevOps Services, HADS Web Development, HADS App Development, Web Application Development HADS, HADS Cloud Consulting, hads techonvations llp, hads tech, hads.tech, HADS India, AWS Consultant India, HADS Software Company, Cloud Managed Services, Application Development, Custom App Development, Mobile App Development, Website Development India, DevOps Company India, hadstech, hads techno LLP, HADS Security, HADS FinOps, HADS Digital Solutions,cloud solutions, cloud migration, DevOps, FinOps, cloud security, cloud management',
+  ogImage = 'https://www.hadstechnovations.com/logo.png',
   ogUrl,
   schema,
 }: SEOHeadProps) => {
-  const siteUrl = 'https://hads.tech';
+  const siteUrl = 'https://www.hadstechnovations.com';
   const fullUrl = ogUrl ? `${siteUrl}${ogUrl}` : siteUrl;
   
   return (

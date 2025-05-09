@@ -21,7 +21,7 @@ const CloudMigrationPage = () => {
     "provider": {
       "@type": "Organization",
       "name": "HADS Technovations LLP",
-      "url": "https://hads.tech"
+      "url": "https://www.hadstechnovations.com/"
     },
     "serviceType": "Cloud Migration",
     "areaServed": {
@@ -37,7 +37,7 @@ const CloudMigrationPage = () => {
     "mainEntityOfPage": {
       "@type": "WebPage",
       "lastReviewed": "2023-08-01",
-      "@id": "https://hads.tech/cloud-migration"
+      "@id": "https://www.hadstechnovations.com/cloud-migration"
     },
     "aggregateRating": {
       "@type": "AggregateRating",

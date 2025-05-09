@@ -15,7 +15,7 @@ const FinOpsPage = () => {
     "provider": {
       "@type": "Organization",
       "name": "HADS Technovations LLP",
-      "url": "https://hads.tech"
+      "url": "https://www.hadstechnovations.com/"
     },
     "serviceType": "Cloud Cost Optimization",
     "areaServed": {
@@ -31,7 +31,7 @@ const FinOpsPage = () => {
     "mainEntityOfPage": {
       "@type": "WebPage",
       "lastReviewed": "2023-09-15",
-      "@id": "https://hads.tech/finops"
+      "@id": "https://www.hadstechnovations.com/finops"
     },
     "aggregateRating": {
       "@type": "AggregateRating",
@@ -42,12 +42,12 @@ const FinOpsPage = () => {
       {
         "@type": "Service",
         "name": "Cloud Migration Services",
-        "url": "https://hads.tech/cloud-migration"
+        "url": "https://www.hadstechnovations.com/cloud-migration"
       },
       {
         "@type": "Service",
         "name": "DevOps Automation",
-        "url": "https://hads.tech/devops"
+        "url": "https://www.hadstechnovations.com/devops"
       }
     ]
   };

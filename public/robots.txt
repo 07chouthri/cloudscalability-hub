@@ -8,6 +8,6 @@ Allow: /devops
 Allow: /cloud-managed-services
 Allow: /security-compliance
 Allow: /about
-Allow: /services/data-analytics
+Allow: /partners
 
-Sitemap: https://hads.tech/sitemap.xml
+Sitemap:https://www.hadstechnovations.com

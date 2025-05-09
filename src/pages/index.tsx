@@ -69,12 +69,12 @@ const IndexPage = () => {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "HADS TechNovations LLP",
-    "url": "https://hads.tech/",
-    "logo": "https://hads.tech/logo.png",
+    "url": "https://www.hadstechnovations.com/",
+    "logo": "https://www.hadstechnovations.com/logo.png",
     "description": "HADS provides enterprise-grade cloud solutions, AWS migration services, and IT consulting to help businesses transform their digital infrastructure.",
     "sameAs": [
-      "https://www.linkedin.com/company/hads-technovations-llp/",
-      "https://twitter.com/HADSTechnovations"
+      "https://www.hadstechnovations.com/",
+      "https://x.com/HADSTech"
     ],
     "address": {
       "@type": "PostalAddress",

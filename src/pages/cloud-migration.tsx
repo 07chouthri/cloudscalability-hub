@@ -12,7 +12,7 @@ export default function CloudMigration() {
     "provider": {
       "@type": "Organization",
       "name": "HADS Technovations LLP",
-      "url": "https://hads.tech"
+      "url": "https://www.hadstechnovations.com/"
     },
     "serviceType": "Cloud Migration",
     "areaServed": {

@@ -14,7 +14,7 @@ const DevOpsPage = () => {
     "provider": {
       "@type": "Organization",
       "name": "HADS Technovations LLP",
-      "url": "https://hads.tech"
+      "url": "https://www.hadstechnovations.com/"
     },
     "serviceType": "DevOps",
     "areaServed": {
@@ -30,7 +30,7 @@ const DevOpsPage = () => {
     "mainEntityOfPage": {
       "@type": "WebPage",
       "lastReviewed": "2023-10-05",
-      "@id": "https://hads.tech/devops"
+      "@id": "https://www.hadstechnovations.com/devops"
     },
     "aggregateRating": {
       "@type": "AggregateRating",
@@ -41,12 +41,12 @@ const DevOpsPage = () => {
       {
         "@type": "Service",
         "name": "Cloud Migration Services",
-        "url": "https://hads.tech/cloud-migration"
+        "url": "https://www.hadstechnovations.com/cloud-migration"
       },
       {
         "@type": "Service",
         "name": "Cloud Managed Services",
-        "url": "https://hads.tech/cloud-managed-services"
+        "url": "https://www.hadstechnovations.com/cloud-managed-services"
       }
     ]
   };

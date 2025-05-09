@@ -2,17 +2,12 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Button } from '@/components/ui/button';
-import { ArrowRight, Building, Users, Globe, Award, BookOpen, Briefcase, Linkedin, Twitter, Mail } from 'lucide-react';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
-import { Link } from 'react-router-dom';
 import AboutSection from '@/components/AboutSectionvisionmission';
 import { useResponsive } from '@/components/ResponsiveContext';
 import SEOHead from '@/components/SEOHead';
 
 const AboutPage = () => {
-  const { isMobile, isTablet } = useResponsive();
-
   // Schema.org structured data for the about page
   const schema = {
     "@context": "https://schema.org",
@@ -21,14 +16,14 @@ const AboutPage = () => {
     "description": "HADS is a leading provider of AWS cloud migration, consulting, and managed services. Learn about our mission, vision, and company story.",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://hads.tech/about"
+      "@id": "https://www.hadstechnovations.com/about"
     },
     "publisher": {
       "@type": "Organization",
       "name": "HADS TechNovations LLP",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://hads.tech/logo.png"
+        "url": "https://www.hadstechnovations.com/logo.png"
       }
     }
   };
@@ -119,7 +114,6 @@ const AboutPage = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );

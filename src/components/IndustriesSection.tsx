@@ -1,5 +1,5 @@
 
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { useInView } from '@/hooks/use-in-view';
 import { cn } from '@/lib/utils';
 import { Building, Stethoscope, LandmarkIcon, Code, ShoppingCart, GraduationCap, Factory, Building2, Radio, Zap } from 'lucide-react';

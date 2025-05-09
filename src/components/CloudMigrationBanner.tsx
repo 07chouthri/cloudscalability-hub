@@ -1,5 +1,5 @@
 
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { cn } from '@/lib/utils';
 import { useInView } from '@/hooks/use-in-view';
 import { Link } from 'react-router-dom';

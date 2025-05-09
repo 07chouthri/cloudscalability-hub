@@ -13,39 +13,30 @@ export const useNavbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      
       setIsScrolled(currentScrollY > 5); // Reduced from 10 to trigger earlier
-      
       if (currentScrollY > lastScrollY && currentScrollY > 50) { // Reduced from 100 to be more responsive
         setIsVisible(false);
       } else {
         setIsVisible(true);
       }
-      
       setLastScrollY(currentScrollY);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [lastScrollY]);
-
   // Close mobile menu when route changes
   useEffect(() => {
     setIsMobileMenuOpen(false);
   }, [location.pathname]);
-
   const isActive = (path: string) => {
     return location.pathname === path;
   };
-
   const handleNavigation = (path: string, sectionId?: string) => {
     setIsMobileMenuOpen(false);
-    
     if (location.pathname !== path) {
       navigate(path);
-      
       if (sectionId) {
         // Need to wait for the page to load before scrolling to section
         setTimeout(() => {
@@ -62,7 +53,6 @@ export const useNavbar = () => {
         section.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     }
-    
     // Always close mobile menu after navigation
     setIsMobileMenuOpen(false);
   };

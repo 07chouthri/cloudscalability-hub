@@ -1,5 +1,3 @@
-
-import React from 'react';
 import CloudMigrationPage from './CloudMigrationPage';
 import SEOHead from '@/components/SEOHead';
 

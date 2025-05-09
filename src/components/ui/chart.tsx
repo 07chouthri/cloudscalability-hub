@@ -1,9 +1,6 @@
 import * as React from "react"
 import * as RechartsPrimitive from "recharts"
-
 import { cn } from "@/lib/utils"
-
-// Format: { THEME_NAME: CSS_SELECTOR }
 const THEMES = { light: "", dark: ".dark" } as const
 
 export type ChartConfig = {
@@ -313,7 +310,6 @@ const ChartLegendContent = React.forwardRef<
   }
 )
 ChartLegendContent.displayName = "ChartLegend"
-
 // Helper to extract item config from a payload.
 function getPayloadConfigFromPayload(
   config: ChartConfig,
@@ -330,9 +326,7 @@ function getPayloadConfigFromPayload(
     payload.payload !== null
       ? payload.payload
       : undefined
-
   let configLabelKey: string = key
-
   if (
     key in payload &&
     typeof payload[key as keyof typeof payload] === "string"
@@ -347,7 +341,6 @@ function getPayloadConfigFromPayload(
       key as keyof typeof payloadPayload
     ] as string
   }
-
   return configLabelKey in config
     ? config[configLabelKey]
     : config[key as keyof typeof config]

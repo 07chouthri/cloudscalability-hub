@@ -1,25 +1,18 @@
 
 import { useRef } from 'react';
-import { Link } from 'react-router-dom';
 import { useInView } from '../hooks/use-in-view';
 import { cn } from '@/lib/utils';
 import {
   Cloud,
   Server,
   Gauge,
-  ArrowRight,
-  Shield,
   GitBranch,
-  Smartphone,
-  Code,
-  Globe,
   RocketIcon,
   BarChart3Icon,
   Settings,
   ShieldCheck,
   ShieldHalf
 } from 'lucide-react';
-import { Button } from './ui/button';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 const ServicesSection = () => {

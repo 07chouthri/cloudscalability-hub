@@ -1,6 +1,5 @@
 
-import { useEffect, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useRef, useState } from 'react';
 import { cn } from '@/lib/utils';
 import { useInView } from '../hooks/use-in-view';
 import { ArrowRight, X } from 'lucide-react';

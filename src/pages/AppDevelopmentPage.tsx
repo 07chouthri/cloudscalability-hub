@@ -1,21 +1,12 @@
-import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { 
-  Smartphone, 
-  Globe, 
   Code, 
-  GitBranch, 
   Zap, 
-  LayoutGrid, 
-  WatchIcon, 
-  Database, 
-  ArrowRight 
+  LayoutGrid
 } from 'lucide-react'; 
-import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { cn } from '@/lib/utils';
 import AppDevelopmentSection from '@/components/AppDevelopmentSection';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
@@ -24,7 +15,6 @@ const AppDevelopmentPage = () => {
     return (
         <div className="min-h-screen flex flex-col bg-white">
             <Navbar />
-
             {/* Hero Banner */}
             <div className="bg-gradient-to-r from-hads-dark via-hads-purple to-hads-dark text-white py-24">
                 <div className="container mx-auto px-4">

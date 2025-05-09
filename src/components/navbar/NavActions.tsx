@@ -34,7 +34,6 @@ const NavActions = ({
       <div className="hidden md:block">
         <GetProtectedDialog />
       </div>
-      
       {/* Mobile menu trigger */}
       <Sheet open={isMobileMenuOpen} onOpenChange={handleOpen}>
         <SheetTrigger asChild>

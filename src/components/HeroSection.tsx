@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Volume2, VolumeX } from "lucide-react";
 import { useInView } from "@/hooks/use-in-view";
@@ -6,7 +6,6 @@ import { useResponsive } from "@/components/ResponsiveContext";
 import { Link } from "react-router-dom";
 import Viedo_For_Home_Page_Desktop from "../video/Home Page Desktop.mp4";
 import Viedo_For_Home_Page_Mobile from "../video/Home Page Mobile.mp4";
-
 
 const HeroSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);

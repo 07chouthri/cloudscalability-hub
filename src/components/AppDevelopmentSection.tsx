@@ -1,19 +1,14 @@
 
-import React, { useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { useRef } from 'react';
 import { useInView } from '@/hooks/use-in-view';
 import { cn } from '@/lib/utils';
 import {
-  Smartphone,
-  Globe,
-  Code,
   GitBranch,
   Zap,
   LayoutGrid,
   ArrowRight,
   Database,
 } from 'lucide-react';
-import { Button } from './ui/button';
 
 const AppDevelopmentSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);

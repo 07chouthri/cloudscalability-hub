@@ -18,7 +18,6 @@ const MobileNav = ({ isOpen, setIsOpen, isActive, handleNavigation }: MobileNavP
 
   return (
     <div className="h-full flex flex-col py-6 px-4 bg-white">
-      
       {/* Top Header with Logo and X Icon */}
       <div className="flex items-center justify-between mb-6">
         <div className="mx-2 h-12 w-auto" style={{height:"90px"}}>
@@ -28,7 +27,6 @@ const MobileNav = ({ isOpen, setIsOpen, isActive, handleNavigation }: MobileNavP
             className="h-full w-auto object-contain"
           />
         </div>
-
         {/* X Icon to close the menu */}
         <button 
           onClick={closeMenu}
@@ -38,7 +36,6 @@ const MobileNav = ({ isOpen, setIsOpen, isActive, handleNavigation }: MobileNavP
           <X className="h-5 w-5" />
         </button>
       </div>
-
       {/* Navigation Links */}
       <div className="flex-grow overflow-y-auto pb-20">
         <div className="flex flex-col space-y-3">
@@ -68,7 +65,6 @@ const MobileNav = ({ isOpen, setIsOpen, isActive, handleNavigation }: MobileNavP
           >
             About Us
           </Link>
-
           {/* Services */}
           <div className="py-2 px-4">
             <div className="font-medium text-gray-800 mb-2">Services</div>
@@ -94,7 +90,6 @@ const MobileNav = ({ isOpen, setIsOpen, isActive, handleNavigation }: MobileNavP
               ))}
             </div>
           </div>
-
           <Link
             to="/partners"
             onClick={() => {
@@ -123,7 +118,6 @@ const MobileNav = ({ isOpen, setIsOpen, isActive, handleNavigation }: MobileNavP
           </Link>
         </div>
       </div>
-
       {/* Footer */}
       <div className="mt-6 pt-6 border-t border-gray-200 sticky bottom-0 bg-white">
         <GetProtectedDialog mobileFullWidth={true} />

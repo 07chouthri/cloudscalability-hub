@@ -3,15 +3,12 @@ import {
   Mail,
   Phone,
   MapPin,
-  Send,
   Facebook,
   Twitter,
   Instagram,
   Linkedin,
   Youtube
 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 import Logo from '../images/Hads.png';
 
 const Footer = () => {

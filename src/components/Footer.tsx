@@ -69,7 +69,7 @@ const Footer = () => {
               <Link to="/about" className="text-gray-600 hover:text-hads-teal hover:underline hover:decoration-sky-500 transition-colors flex items-center" onClick={handleNavigation}>
                 <span className="mr-1">About Us</span>
               </Link>
-              <Link to="/services" className="text-gray-600 hover:text-hads-teal hover:underline hover:decoration-sky-500 transition-colors flex items-center" onClick={handleNavigation}>
+              <Link to="/cloud-migration" className="text-gray-600 hover:text-hads-teal hover:underline hover:decoration-sky-500 transition-colors flex items-center" onClick={handleNavigation}>
                 <span className="mr-1">Services</span>
               </Link>
               <Link to="/partners" className="text-gray-600 hover:text-hads-teal hover:underline hover:decoration-sky-500 transition-colors flex items-center" onClick={handleNavigation}>
@@ -92,16 +92,16 @@ const Footer = () => {
                 <Link to="/cloud-migration" className="text-gray-600 hover:text-hads-teal hover:underline hover:decoration-sky-500 transition-colors flex items-center" onClick={handleNavigation}>
                   <span className="mr-1">Cloud Migration and Consulting</span>
                 </Link>
-                <Link to="/services/managed-services" className="text-gray-600 hover:text-hads-teal hover:underline hover:decoration-sky-500 transition-colors flex items-center" onClick={handleNavigation}>
+                <Link to="/cloud-managed-services" className="text-gray-600 hover:text-hads-teal hover:underline hover:decoration-sky-500 transition-colors flex items-center" onClick={handleNavigation}>
                   <span className="mr-1">Cloud Managed Service</span>
                 </Link>
-                <Link to="/services/finops" className="text-gray-600 hover:text-hads-teal hover:underline hover:decoration-sky-500 transition-colors flex items-center" onClick={handleNavigation}>
+                <Link to="/finops" className="text-gray-600 hover:text-hads-teal hover:underline hover:decoration-sky-500 transition-colors flex items-center" onClick={handleNavigation}>
                   <span className="mr-1">Cloud Cost Optimization - FinOps</span>
                 </Link>
-                <Link to="/services/devops-automation" className="text-gray-600 hover:text-hads-teal hover:underline hover:decoration-sky-500 transition-colors flex items-center" onClick={handleNavigation}>
+                <Link to="/devops" className="text-gray-600 hover:text-hads-teal hover:underline hover:decoration-sky-500 transition-colors flex items-center" onClick={handleNavigation}>
                   <span className="mr-1">DevOps Automation</span>
                 </Link>
-                <Link to="/services/security" className="text-gray-600 hover:text-hads-teal hover:underline hover:decoration-sky-500 transition-colors flex items-center" onClick={handleNavigation}>
+                <Link to="/security-compliance" className="text-gray-600 hover:text-hads-teal hover:underline hover:decoration-sky-500 transition-colors flex items-center" onClick={handleNavigation}>
                   <span className="mr-1">Security and Compliances</span>
                 </Link>
               </div>

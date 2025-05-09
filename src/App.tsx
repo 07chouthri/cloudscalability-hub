@@ -12,6 +12,7 @@ import ContainerizationPage from './pages/ContainerizationPage';
 import SecurityCompliancePage from './pages/SecurityCompliancePage';
 import PartnersPage from './pages/PartnersPage';
 import NotFound from './pages/NotFound';
+import Logo from './components/logo'
 import { Toaster } from './components/ui/toaster';
 import { ThemeProvider } from './components/theme-provider';
 import { ResponsiveProvider } from './components/ResponsiveContext';
@@ -44,6 +45,7 @@ function App() {
                 <Route path="/devops" element={<DevOpsPage />} />
                 <Route path="/cloud-managed-services" element={<ContainerizationPage />} />
                 <Route path="/security-compliance" element={<SecurityCompliancePage />} />
+                <Route path="/logo.png" element={<Logo />} />
                 <Route path="/partners" element={<PartnersPage />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>

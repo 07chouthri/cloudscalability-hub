@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -64,7 +63,7 @@ const IndexPage = () => {
     });
   };
 
-  // Schema.org structured data for the homepage
+  // Enhanced Schema.org structured data for the homepage
   const schema = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -74,7 +73,9 @@ const IndexPage = () => {
     "description": "HADS provides enterprise-grade cloud solutions, AWS migration services, and IT consulting to help businesses transform their digital infrastructure.",
     "sameAs": [
       "https://www.hadstechnovations.com/",
-      "https://x.com/HADSTech"
+      "https://x.com/HADSTech",
+      "https://www.linkedin.com/company/hads-technovations-llp/",
+      "https://www.facebook.com/hadstechnovations/"
     ],
     "address": {
       "@type": "PostalAddress",
@@ -110,15 +111,45 @@ const IndexPage = () => {
           "description": "Ensure data protection and regulatory compliance"
         }
       ]
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Cloud Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "AWS Cloud Migration",
+            "url": "https://www.hadstechnovations.com/cloud-migration"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "FinOps Services",
+            "url": "https://www.hadstechnovations.com/finops"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "DevOps Automation",
+            "url": "https://www.hadstechnovations.com/devops"
+          }
+        }
+      ]
     }
   };
 
   return (
     <div className="min-h-screen flex flex-col bg-white" ref={scrollRef}>
       <SEOHead
-        title="HADS Technovations LLP"
+        title="HADS Technovations LLP | Enterprise Cloud & AWS Solutions"
         description="HADS offers enterprise-grade AWS cloud solutions, migration services, DevOps automation, and IT consulting to help businesses transform their digital infrastructure."
-        keywords="cloud solutions, AWS migration, DevOps, FinOps, cloud security, AWS partner, cloud consulting, cloud management"
+        keywords="HADS Technovations LLP, HADS, hads cloud services, cloud solutions, AWS migration, DevOps, FinOps, cloud security, AWS partner, cloud consulting, cloud management"
         ogUrl="/"
         schema={schema}
       />

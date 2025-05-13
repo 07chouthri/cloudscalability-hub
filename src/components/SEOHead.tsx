@@ -1,3 +1,4 @@
+
 import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {
@@ -26,6 +27,7 @@ const SEOHead = ({
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
+      <meta name="author" content="HADS Technovations LLP" />
       <link rel="canonical" href={fullUrl} />
       
       {/* Open Graph / Facebook */}
@@ -34,6 +36,7 @@ const SEOHead = ({
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
+      <meta property="og:site_name" content="HADS Technovations LLP" />
       
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />

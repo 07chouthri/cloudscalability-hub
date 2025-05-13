@@ -1,4 +1,3 @@
-
 import { useRef, useState } from 'react';
 import { cn } from '@/lib/utils';
 import { useInView } from '../hooks/use-in-view';
@@ -10,6 +9,7 @@ import CloudManagementServices from '../images/Cloud Management Services.png';
 import CloudMigration from '../images/Cloud Migration.png';
 import CloudSolutions from '../images/Cloud Solutions.png';
 import { useResponsive } from './ResponsiveContext';
+
 type Resource = {
   id: number;
   title: string;
@@ -30,7 +30,7 @@ const resources: Resource[] = [
     tags: ['AWS', 'AZURE', 'GOOGLE CLOUD'],
     slug: 'cloud-solutions',
     longDescription:
-      'Netflix ensures 99.99% global uptime by leveraging the scalability and reliability of AWS Cloud. With AWS\'s global infrastructure, auto-scaling, and multi-region deployment capabilities, Netflix delivers a seamless streaming experience to millions of users worldwide—even during peak demand—while maintaining high availability and fault tolerance.',
+      "Netflix ensures 99.99% global uptime by leveraging the scalability and reliability of AWS Cloud. With AWS global infrastructure, auto-scaling, and multi-region deployment capabilities, Netflix delivers a seamless streaming experience to millions of users worldwide—even during peak demand—while maintaining high availability and fault tolerance."
   },
   {
     id: 2,
@@ -41,7 +41,7 @@ const resources: Resource[] = [
     tags: ['CLOUD SECURITY', 'DEVOPS', 'CLOUD SOLUTIONS'],
     slug: 'cloud-migration',
     longDescription:
-      'Formula 1 uses AWS AI and machine learning to analyze vast amounts of race data in real-time, helping teams optimize race strategies on the fly. By processing telemetry, weather, and tire performance data, AWS enables smarter decisions on pit stops, overtakes, and race tactics—giving teams a competitive edge on the track.',
+      "Formula 1 uses AWS AI and machine learning to analyze vast amounts of race data in real-time, helping teams optimize race strategies on the fly. By processing telemetry, weather, and tire performance data, AWS enables smarter decisions on pit stops, overtakes, and race tactics—giving teams a competitive edge on the track."
   },
   {
     id: 3,
@@ -52,10 +52,9 @@ const resources: Resource[] = [
     tags: ['FINOPS', 'DEVOPS', 'CONTAINERIZATION'],
     slug: 'cloud-management',
     longDescription:
-      'AWS helps businesses achieve higher ROI by providing scalable, pay-as-you-go cloud services that reduce upfront infrastructure costs and ongoing maintenance. With powerful tools for automation, performance optimization, and cost monitoring, businesses can scale efficiently, improve productivity, and only pay for what they use. This results in better resource utilization and faster returns on investment.',
-  },
+      "AWS helps businesses achieve higher ROI by providing scalable, pay-as-you-go cloud services that reduce upfront infrastructure costs and ongoing maintenance. With powerful tools for automation, performance optimization, and cost monitoring, businesses can scale efficiently, improve productivity, and only pay for what they use. This results in better resource utilization and faster returns on investment."
+  }
 ];
-
 
 const ResourcesSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -216,4 +215,3 @@ const ResourcesSection = () => {
 };
 
 export default ResourcesSection;
-

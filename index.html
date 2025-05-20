@@ -48,10 +48,14 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/src/video/Home Page Desktop.mp4" as="video" type="video/mp4" media="(min-width: 768px)" fetchpriority="high" />
+    <link rel="preload" href="/src/video/Home Page Mobile.mp4" as="video" type="video/mp4" media="(max-width: 767px)" fetchpriority="high" />
+    
     <!-- Fonts preconnect for performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Poppins:wght@400;500;600;700&family=Raleway:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.hadstechnovations.com/" />

@@ -43,7 +43,7 @@ export const captureWebVitals = (callback: (metrics: PerformanceMetrics) => void
 
   // First Input Delay
   const fidEntryHandler = (entries: PerformanceObserverEntryList) => {
-    const fidEntry = entries.getEntries()[0];
+    const fidEntry = entries.getEntries()[0] as PerformanceEventTiming;
     if (fidEntry) {
       metrics.fid = fidEntry.processingStart - fidEntry.startTime;
       callback({...metrics});

@@ -59,7 +59,7 @@ const HeroContent = ({ isVisible }: HeroContentProps) => {
 
       {/* Description */}
       <p 
-        className="text-lg text-gray-300 max-w-lg animate-fade-up font-sans" 
+        className="text-lg text-gray-100 max-w-lg animate-fade-up font-sans" 
         style={{ animationDelay: '1.1s' }}
       >
         We combine cutting-edge cloud technologies with deep industry knowledge to help businesses
@@ -74,9 +74,10 @@ const HeroContent = ({ isVisible }: HeroContentProps) => {
           size="hero"
           className="transition-all duration-300 ease-in-out animate-fade-up bg-gradient-to-r from-[#3a1b6d] to-[#e91e63] hover:shadow-lg hover:shadow-pink-500/20 hover:translate-y-[-2px]" 
           style={{ animationDelay: '1.3s' }}
+          aria-label="Get started with cloud migration services"
         >
           Get Started
-          <ArrowRight size={16} className="ml-2" />
+          <ArrowRight size={16} className="ml-2" aria-hidden="true" />
         </Button>
       </div>
     </div>

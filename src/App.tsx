@@ -9,6 +9,8 @@ import { Toaster } from './components/ui/toaster';
 import { lazyLoadComponent } from './utils/lazyLoad';
 import Logo from './components/logo';
 import NotFound from './pages/NotFound';
+import StylesInjector from './components/StylesInjector';
+import ContactButton from './components/ContactButton';
 
 // Lazy load page components
 const IndexPage = lazyLoadComponent(() => import('./pages/index'));
@@ -23,8 +25,10 @@ const PartnersPage = lazyLoadComponent(() => import('./pages/PartnersPage'));
 
 // Loading fallback component
 const PageLoader = () => (
-  <div className="flex items-center justify-center w-full h-screen bg-white">
-    <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-primary"></div>
+  <div className="flex items-center justify-center w-full h-screen bg-white" aria-label="Loading content">
+    <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-primary" role="status">
+      <span className="sr-only">Loading...</span>
+    </div>
   </div>
 );
 
@@ -59,6 +63,7 @@ function App() {
           <ResponsiveProvider>
             <Router>
               <ScrollToTop />
+              <StylesInjector />
               <Suspense fallback={<PageLoader />}>
                 <Routes>
                   <Route path="/" element={<IndexPage />} />
@@ -74,6 +79,7 @@ function App() {
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </Suspense>
+              <ContactButton />
               <Toaster />
             </Router>
           </ResponsiveProvider>

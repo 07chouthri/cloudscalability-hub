@@ -30,16 +30,16 @@ const HeroFeatureCard = ({ icon, title, description, benefits }: HeroFeatureCard
     };
   }, []);
 
-  // Define lighter color gradients based on title to match the website's color palette
+  // Define higher contrast color gradients based on title to match the website's color palette
   const getGradient = () => {
     if (title.includes("Cloud")) {
-      return "from-blue-300 to-cyan-200"; // Light blue gradient
+      return "from-blue-400 to-cyan-300"; // Improved contrast blue gradient
     } else if (title.includes("Container")) {
-      return "from-pink-300 to-purple-200"; // Light pink to purple gradient
+      return "from-pink-400 to-purple-300"; // Improved contrast pink to purple gradient
     } else if (title.includes("FinOps")) {
-      return "from-emerald-300 to-teal-200"; // Light emerald to teal gradient
+      return "from-emerald-400 to-teal-300"; // Improved contrast emerald to teal gradient
     } else {
-      return "from-indigo-300 to-violet-200"; // Light indigo to violet gradient
+      return "from-indigo-400 to-violet-300"; // Improved contrast indigo to violet gradient
     }
   };
   
@@ -83,7 +83,7 @@ const HeroFeatureCard = ({ icon, title, description, benefits }: HeroFeatureCard
             )}
             style={{ transitionDelay: `${300 + i * 100}ms` }}
           >
-            <span className="text-xs text-gray-700 font-medium">{benefit}</span>
+            <span className="text-xs text-gray-800 font-medium">{benefit}</span>
           </div>
         ))}
       </div>
@@ -92,11 +92,11 @@ const HeroFeatureCard = ({ icon, title, description, benefits }: HeroFeatureCard
       <div className={cn(
         "absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-cyan-200/20 to-transparent rounded-full blur-2xl transition-all duration-1000",
         isVisible ? "opacity-100 scale-100" : "opacity-0 scale-50"
-      )}></div>
+      )} aria-hidden="true"></div>
       <div className={cn(
         "absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-pink-200/20 to-transparent rounded-full blur-2xl transition-all duration-1000",
         isVisible ? "opacity-100 scale-100" : "opacity-0 scale-50"
-      )}></div>
+      )} aria-hidden="true"></div>
     </div>
   );
 };

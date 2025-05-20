@@ -31,6 +31,9 @@ const ContactButton = () => {
           isHovered ? "max-w-[140px] opacity-100" : "max-w-0 opacity-0"
         )}
         style={{ transitionDelay: isHovered ? '0.1s' : '0s' }}
+        id="contact-tooltip"
+        role="tooltip"
+        aria-hidden={!isHovered}
       >
         Contact Us
       </div>
@@ -40,8 +43,10 @@ const ContactButton = () => {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         aria-label="Contact Us"
+        aria-describedby="contact-tooltip"
+        type="button"
       >
-        <MessageSquare size={24} />
+        <MessageSquare size={24} aria-hidden="true" />
       </button>
     </div>
   );

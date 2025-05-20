@@ -10,47 +10,47 @@ const IndustriesSection = () => {
 
   const industries = [
     {
-      icon: <Stethoscope className="w-10 h-10 text-pink-500" />,
+      icon: <Stethoscope className="w-10 h-10 text-pink-600" />, // Darker pink for better contrast
       name: "Healthcare",
       description: "Secure, compliant cloud solutions for hospitals, clinics, and medical research."
     },
     {
-      icon: <LandmarkIcon className="w-10 h-10 text-green-500" />,
+      icon: <LandmarkIcon className="w-10 h-10 text-green-600" />, // Darker green for better contrast
       name: "Finance & Banking",
       description: "Reliable cloud infrastructure for banking apps, transactions, and analytics."
     },
     {
-      icon: <Code className="w-10 h-10 text-blue-500" />,
+      icon: <Code className="w-10 h-10 text-blue-600" />, // Darker blue for better contrast
       name: "Information Technology",
       description: "DevOps, CI/CD, and scalable infrastructure tailored for tech companies."
     },
     {
-      icon: <ShoppingCart className="w-10 h-10 text-orange-500" />,
+      icon: <ShoppingCart className="w-10 h-10 text-orange-600" />, // Darker orange for better contrast
       name: "Retail & E-Commerce",
       description: "Scalable e-commerce platforms, digital storefronts, and inventory automation."
     },
     {
-      icon: <GraduationCap className="w-10 h-10 text-indigo-500" />,
+      icon: <GraduationCap className="w-10 h-10 text-indigo-600" />, // Darker indigo for better contrast
       name: "Education & Research",
       description: "Cloud platforms for LMS, virtual classrooms, and academic data security."
     },
     {
-      icon: <Factory className="w-10 h-10 text-gray-600" />,
+      icon: <Factory className="w-10 h-10 text-gray-700" />, // Darker gray for better contrast
       name: "Manufacturing & IoT",
       description: "IoT cloud integration, automation pipelines, and factory data management."
     },
     {
-      icon: <Building2 className="w-10 h-10 text-purple-500" />,
+      icon: <Building2 className="w-10 h-10 text-purple-600" />, // Darker purple for better contrast
       name: "Government",
       description: "Secure, scalable solutions for digital governance and citizen services."
     },
     {
-      icon: <Radio className="w-10 h-10 text-cyan-500" />,
+      icon: <Radio className="w-10 h-10 text-cyan-600" />, // Darker cyan for better contrast
       name: "Telecommunications",
       description: "High-availability solutions for network infrastructure and communications."
     },
     {
-      icon: <Zap className="w-10 h-10 text-cyan-500" />,
+      icon: <Zap className="w-10 h-10 text-cyan-700" />, // Even darker cyan for better contrast
       name: "Energy & Utilities",
       description: "Real-time monitoring, smart grids, and analytics for sustainable operations."
     }
@@ -62,7 +62,7 @@ const IndustriesSection = () => {
         {/* Section Heading */}
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center mb-4">
-            <div className="w-12 h-12 rounded-full bg-hads-pink/10 flex items-center justify-center">
+            <div className="w-12 h-12 rounded-full bg-hads-pink/10 flex items-center justify-center" aria-hidden="true">
               <Building className="w-6 h-6 text-hads-purple" />
             </div>
           </div>
@@ -98,9 +98,9 @@ const IndustriesSection = () => {
               )}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <div className="mb-3 flex justify-center">{icon}</div>
+              <div className="mb-3 flex justify-center" aria-hidden="true">{icon}</div>
               <h3 className="text-lg font-semibold text-hads-dark mb-1">{name}</h3>
-              <p className="text-xs text-gray-600">{description}</p>
+              <p className="text-xs text-gray-700">{description}</p>
             </div>
           ))}
         </div>

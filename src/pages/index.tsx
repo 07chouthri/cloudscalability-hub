@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -18,6 +17,11 @@ import { cn } from '@/lib/utils';
 import { useInView } from '@/hooks/use-in-view';
 import { useResponsive } from '@/components/ResponsiveContext';
 import SEOHead from '@/components/SEOHead';
+import PeriodicPromotionModal from '@/components/PeriodicPromotionModal';
+import GoogleAnalytics from '@/components/GoogleAnalytics';
+
+// Replace with your actual Google Analytics Measurement ID
+const GA_MEASUREMENT_ID = "G-XXXXXXXXXX"; // Replace with your actual Google Analytics ID
 
 const IndexPage = () => {
   const { isMobile, isTablet } = useResponsive();
@@ -153,8 +157,8 @@ const IndexPage = () => {
   const youtubeUrl = "http://www.youtube.com/@HADSTechovations";
   const twitterUrl = "https://twitter.com/HADSTech";
 
-  // Enhanced keywords for better SEO
-  const enhancedKeywords = "HADS Technovations LLP, HADS, hads cloud services, cloud solutions, AWS migration, DevOps, FinOps, cloud security, AWS partner, cloud consulting, cloud management, cloud migration, aws, aws console, amazon aws, cloud infra, aws cloud, aws cloud computing, cloud services, aws cloud services, AWS Migration services, virtual machines migration in cloud computing, aws cloud services list, aws cloud services pricing, aws cloud services overview, aws cloud computing advantages, aws cloud ai services, aws cloud services benefits, aws cloud consulting services, aws cloud service providers, aws managed services, aws managed services list, aws service providers in india, aws global infrastructure, best aws consulting companies, best aws consulting services, aws cost optimization, aws cost optimization services, best cloud services providers in chennai, top cloud service providers, managed cloud service providers";
+  // Enhanced keywords for better SEO - using the comprehensive keywords list provided
+  const enhancedKeywords = "HADS Technovations LLP, HADS, hads cloud services, cloud migration, aws, aws console, amazon aws, cloud infra, aws cloud, aws cloud computing, cloud services, types of cloud services, amazon cloud services, cloud services in cloud computing, cloud services provider, aws cloud services, AWS Migration services, virtual machines migration in cloud computing, onpremises, bigdata, AWS cloud service providers, aws cloud services list, aws cloud services pricing, aws cloud services overview, aws cloud computing advantages, aws cloud ai services, aws cloud services benefits, aws cloud consulting services, aws service providers in india, aws global infrastructure, best aws consulting companies, best aws consulting services, aws cost optimization, aws cost optimization services, best cloud services providers in chennai, top cloud service providers, managed cloud service providers";
 
   return (
     <div className="min-h-screen flex flex-col bg-white" ref={scrollRef}>
@@ -167,8 +171,13 @@ const IndexPage = () => {
         linkedinUrl={linkedinUrl}
         youtubeUrl={youtubeUrl}
         twitterUrl={twitterUrl}
+        gaMeasurementId={GA_MEASUREMENT_ID}
       />
       
+      {/* Google Analytics - extra implementation via component to ensure it loads */}
+      <GoogleAnalytics measurementId={GA_MEASUREMENT_ID} />
+      
+      {/* Main content */}
       {/* Full-height hero section with navbar overlay */}
       {/* <div className="relative h-screen"> */}
         {/* Hero Background */}
@@ -218,6 +227,9 @@ const IndexPage = () => {
           <TestimonialsSection />
         </div>
       </main>
+      
+      {/* Add the periodic promotion modal */}
+      <PeriodicPromotionModal />
       
       <Footer />
 

@@ -1,4 +1,5 @@
 
+# Robots.txt for HADS Technovations LLP
 User-agent: *
 Allow: /
 Allow: /about
@@ -14,4 +15,26 @@ Allow: /services/app-development
 Allow: /services/cloud-solutions
 Allow: /services/security
 
+# Add crawl delay to prevent server overload
+Crawl-delay: 10
+
+# Block certain directories
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+
+# Allow important bots specifically
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Sitemap location
 Sitemap: https://www.hadstechnovations.com/sitemap.xml

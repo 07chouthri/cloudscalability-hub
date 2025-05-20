@@ -1,0 +1,17 @@
+
+User-agent: *
+Allow: /
+Allow: /about
+Allow: /cloud-migration
+Allow: /contact
+Allow: /finops
+Allow: /devops
+Allow: /cloud-managed-services
+Allow: /security-compliance
+Allow: /partners
+Allow: /services/data-analytics
+Allow: /services/app-development
+Allow: /services/cloud-solutions
+Allow: /services/security
+
+Sitemap: https://www.hadstechnovations.com/sitemap.xml

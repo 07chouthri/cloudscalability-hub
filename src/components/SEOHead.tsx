@@ -21,7 +21,7 @@ interface SEOHeadProps {
 const SEOHead = ({
   title,
   description,
-  keywords = 'HADS, HADS Technovations LLP, HADS Cloud Solutions, HADS DevOps Services, HADS Web Development, HADS App Development, Web Application Development HADS, HADS Cloud Consulting, hads techonvations llp, hads tech, hads.tech, HADS India, AWS Consultant India, HADS Software Company, Cloud Managed Services, Application Development, Custom App Development, Mobile App Development, Website Development India, DevOps Company India, hadstech, hads techno LLP, HADS Security, HADS FinOps, HADS Digital Solutions,cloud solutions, cloud migration, DevOps, FinOps, cloud security, cloud management',
+  keywords = 'cloud migration, aws, aws console, amazon aws, cloud infra, aws cloud, aws cloud computing, cloud services, types of cloud services, amazon cloud services, cloud services in cloud computing, cloud services provider, aws cloud services, AWS Migration services, virtual machines migration in cloud computing, onpremises, bigdata, AWS cloud service providers, aws cloud services list, aws cloud services pricing, aws cloud services overview, aws cloud computing advantages, aws cloud ai services, aws cloud services benefits, aws cloud consulting services, aws service providers in india, aws global infrastructure, best aws consulting companies, best aws consulting services, aws cost optimization, aws cost optimization services, best cloud services providers in chennai, top cloud service providers, managed cloud service providers',
   ogImage = 'https://www.hadstechnovations.com/logo.png',
   ogUrl,
   schema,
@@ -82,6 +82,11 @@ const SEOHead = ({
       <meta name="distribution" content="global" />
       <meta name="rating" content="general" />
       <link rel="canonical" href={canonicalUrl} />
+      
+      {/* Additional SEO meta tags */}
+      <meta name="classification" content="Cloud Services, AWS Consulting, Cloud Migration" />
+      <meta name="subject" content="Cloud computing, AWS, Cloud Migration, DevOps, FinOps" />
+      <meta name="copyright" content={author} />
       
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={ogType} />

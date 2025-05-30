@@ -1,0 +1,133 @@
+# robots.txt for HADS Technovations LLP
+# Company: HADS Technovations LLP - India's Leading Cloud Solutions Provider
+# Founded: 2020 | AWS Partner | Global Services
+
+User-agent: *
+Allow: /
+Crawl-delay: 1
+
+# ===== ALLOW IMPORTANT PAGES =====
+Allow: /about
+Allow: /contact
+Allow: /cloud-migration
+Allow: /finops
+Allow: /devops
+Allow: /cloud-managed-services
+Allow: /security-compliance
+Allow: /partners
+Allow: /charts
+Allow: /services/
+Allow: /my-application
+
+# ===== BRAND KEYWORD ROUTES =====
+Allow: /hads-technovations-llp
+Allow: /hads-technovations
+Allow: /hads-llp
+Allow: /hads-tech
+Allow: /aws-partner-india
+
+# ===== BLOCK PRIVATE/SECURE PATHS =====
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /login/
+Disallow: /search
+Disallow: /api/
+Disallow: /*?sessionid=
+Disallow: /*?ref=
+Disallow: /*&ref=
+Disallow: /*?
+Disallow: /*.json$
+
+# ===== ALLOW STATIC FILES & ASSETS =====
+Allow: /*.js$
+Allow: /*.css$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.svg$
+Allow: /*.webp$
+Allow: /*.woff$
+Allow: /*.woff2$
+Allow: /*.ttf$
+Allow: /*.mp4$
+Allow: /*.pdf$
+Allow: /logo.png
+Allow: /favicon.ico
+Allow: /apple-touch-icon.png
+
+# ===== SEARCH ENGINE CRAWLER CONFIGURATION =====
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 2
+
+# ===== SOCIAL MEDIA BOTS =====
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# ===== BLOCK AGGRESSIVE OR NON-USEFUL BOTS =====
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: MegaIndex
+Disallow: /
+
+User-agent: SiteAuditBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+# ===== SITEMAP FOR CRAWLERS =====
+Sitemap: https://www.hadstechnovations.com/sitemap.xml
+
+# ===== COMPANY INFORMATION FOR SEARCH ENGINES =====
+# Legal Name: HADS Technovations Limited Liability Partnership
+# Brand Names: HADS, HADS Tech, HADS Technovations, HADS LLP
+# Industry: Information Technology, Cloud Computing, Software Development
+# Services: Cloud Migration, DevOps, FinOps, Managed Services, Security & Compliance, Application Development
+# Specialization: AWS Cloud Migration, DevOps Automation, Cost Optimization, Security
+# Contact: info@hadstechnovations.com
+# Location: Chennai, India – Serving Globally
+# Founded: 2020
+# Certifications: AWS Partner
+# Target Keywords: HADS Technovations LLP, cloud solutions provider, AWS partner India, application development

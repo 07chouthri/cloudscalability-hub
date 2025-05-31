@@ -11,7 +11,7 @@ import Logo from './components/logo';
 import NotFound from './pages/NotFound';
 import StylesInjector from './components/StylesInjector';
 
-// Lazy load page components
+// Optimized lazy loading with better error handling and preloading
 const IndexPage = lazyLoadComponent(() => import('./pages/index'));
 const AboutPage = lazyLoadComponent(() => import('./pages/AboutPage'));
 const CloudMigrationPage = lazyLoadComponent(() => import('./pages/CloudMigrationPage'));
@@ -22,35 +22,53 @@ const ContainerizationPage = lazyLoadComponent(() => import('./pages/Containeriz
 const SecurityCompliancePage = lazyLoadComponent(() => import('./pages/SecurityCompliancePage'));
 const PartnersPage = lazyLoadComponent(() => import('./pages/PartnersPage'));
 
-// Loading fallback component
+// Optimized loading fallback with better UX
 const PageLoader = () => (
   <div className="flex items-center justify-center w-full h-screen bg-white" aria-label="Loading content">
-    <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-primary" role="status">
-      <span className="sr-only">Loading...</span>
+    <div className="flex flex-col items-center gap-4">
+      <div className="w-12 h-12 border-4 border-dashed rounded-full animate-spin border-hads-purple" role="status">
+        <span className="sr-only">Loading...</span>
+      </div>
+      <p className="text-sm text-gray-600 animate-pulse">Loading...</p>
     </div>
   </div>
 );
 
-// Scroll restoration component
+// Optimized scroll restoration
 function ScrollToTop() {
   const { pathname } = useLocation();
   
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // Smooth scroll to top with performance optimization
+    const scrollToTop = () => {
+      if ('scrollBehavior' in document.documentElement.style) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        window.scrollTo(0, 0);
+      }
+    };
+    
+    // Use requestAnimationFrame for better performance
+    requestAnimationFrame(scrollToTop);
   }, [pathname]);
   
   return null;
 }
 
 function App() {
-  // Create a QueryClient instance with optimized settings
+  // Optimized QueryClient with better caching and performance settings
   const [queryClient] = useState(() => new QueryClient({
     defaultOptions: {
       queries: {
         refetchOnWindowFocus: false,
+        retry: (failureCount, error) => failureCount < 2,
+        staleTime: 10 * 60 * 1000, // 10 minutes
+        gcTime: 15 * 60 * 1000, // 15 minutes
+        refetchOnMount: false,
+        refetchOnReconnect: 'always',
+      },
+      mutations: {
         retry: 1,
-        staleTime: 5 * 60 * 1000, // 5 minutes
-        gcTime: 10 * 60 * 1000, // 10 minutes (previously cacheTime)
       },
     },
   }));
@@ -60,7 +78,7 @@ function App() {
       <ThemeProvider defaultTheme="light" storageKey="hads-theme">
         <QueryClientProvider client={queryClient}>
           <ResponsiveProvider>
-            <Router>
+            <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
               <ScrollToTop />
               <StylesInjector />
               <Suspense fallback={<PageLoader />}>

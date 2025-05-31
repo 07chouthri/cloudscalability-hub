@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, memo } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import HeroSection from '@/components/HeroSection';
@@ -14,13 +14,57 @@ import IndustriesSection from '@/components/IndustriesSection';
 import CloudMigrationExitModal from '@/components/CloudMigrationExitModal';
 import { ArrowUp } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { useInView } from '@/hooks/use-in-view';
 import { useResponsive } from '@/components/ResponsiveContext';
 import SEOHead from '@/components/SEOHead';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
+import { preloadCriticalComponents } from '@/utils/lazyLoad';
 
 // Replace with your actual Google Analytics Measurement ID
-const GA_MEASUREMENT_ID = "G-XXXXXXXXXX"; // Replace with your actual Google Analytics ID
+const GA_MEASUREMENT_ID = "G-XXXXXXXXXX";
+
+// Memoized scroll button component for better performance
+const ScrollToTopButton = memo(({ showScrollTop, scrollProgress, scrollToTop, isMobile, isTablet }: {
+  showScrollTop: boolean;
+  scrollProgress: number;
+  scrollToTop: () => void;
+  isMobile: boolean;
+  isTablet: boolean;
+}) => (
+  <button 
+    onClick={scrollToTop} 
+    className={cn(
+      "fixed bottom-4 md:bottom-6 lg:bottom-8 right-4 md:right-6 lg:right-8 p-2 md:p-3 lg:p-4 rounded-full bg-gradient-to-r from-hads-purple to-hads-pink text-white shadow-xl z-50 transition-all duration-300 transform",
+      showScrollTop ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 pointer-events-none"
+    )}
+    aria-label="Scroll to top"
+  >
+    <div className="relative">
+      <svg className="w-5 h-5 md:w-6 md:h-6 lg:w-8 lg:h-8" viewBox="0 0 36 36">
+        <circle 
+          cx="18" 
+          cy="18" 
+          r="16" 
+          fill="none" 
+          stroke="rgba(255,255,255,0.3)" 
+          strokeWidth="2" 
+        />
+        <circle 
+          cx="18" 
+          cy="18" 
+          r="16" 
+          fill="none" 
+          stroke="white" 
+          strokeWidth="2" 
+          strokeDasharray={`${2 * Math.PI * 16 * scrollProgress / 100} ${2 * Math.PI * 16}`}
+          strokeDashoffset="0" 
+          strokeLinecap="round" 
+          style={{ transform: 'rotate(-90deg)', transformOrigin: 'center' }}
+        />
+      </svg>
+      <ArrowUp size={isMobile ? 12 : isTablet ? 14 : 18} className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-transform duration-200" />
+    </div>
+  </button>
+));
 
 const IndexPage = () => {
   const { isMobile, isTablet } = useResponsive();
@@ -29,33 +73,43 @@ const IndexPage = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Scroll to top when component mounts
+    // Preload critical components
+    preloadCriticalComponents();
+    
+    // Optimized scroll to top
     window.scrollTo(0, 0);
     
-    // Handle hash links on initial page load
+    // Handle hash links with better performance
     const hash = window.location.hash;
     if (hash) {
       const id = hash.replace('#', '');
       const element = document.getElementById(id);
       if (element) {
         setTimeout(() => {
-          window.scrollTo(0, 0); // First scroll to top
+          window.scrollTo(0, 0);
           element.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }, 250);
       }
     }
 
-    // Handle scroll to top button visibility and progress
+    // Throttled scroll handler for better performance
+    let ticking = false;
     const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = (scrollTop / scrollHeight) * 100;
-      
-      setScrollProgress(progress);
-      setShowScrollTop(scrollTop > 200);
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const scrollTop = window.scrollY;
+          const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+          const progress = Math.min((scrollTop / scrollHeight) * 100, 100);
+          
+          setScrollProgress(progress);
+          setShowScrollTop(scrollTop > 200);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -235,24 +289,49 @@ const IndexPage = () => {
   // Enhanced keywords with stronger company branding
   const enhancedKeywords = "HADS Technovations LLP, HADS Technovations, HADS LLP, HADS Tech, HADS company, HADS India, HADS Technovations Limited Liability Partnership, My Application, custom application development, cloud applications, web applications, mobile applications, enterprise software development, application modernization, cloud migration services, aws consulting, application hosting, software development company india, custom software solutions, business applications, cloud native applications, application security, scalable applications, HADS application services, digital transformation, devops automation, finops optimization, managed cloud services, HADS Technovations LLP company profile, HADS Technovations LLP services, HADS Technovations LLP AWS partner, HADS Technovations LLP cloud solutions";
 
+  const enhancedSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "HADS Technovations LLP",
+    "alternateName": ["HADS", "HADS Tech", "HADS Technovations", "HADS LLP"],
+    "legalName": "HADS Technovations Limited Liability Partnership",
+    "url": "https://www.hadstechnovations.com/",
+    "logo": "https://www.hadstechnovations.com/logo.png",
+    "description": "HADS Technovations LLP - India's leading cloud solutions provider and AWS partner.",
+    "foundingDate": "2020",
+    "industry": ["Information Technology and Cloud Services", "Software Development", "Cloud Computing"],
+    "serviceArea": {
+      "@type": "Place",
+      "name": "Global",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "addressCountry": "IN"
+      }
+    }
+  };
+
+  const linkedinUrl = "https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Aorganization%3A106360221&keywords=hads%20technovations%20llp&origin=RICH_QUERY_SUGGESTION&position=0&searchId=a54d4b81-3f2b-4e95-b74f-107c37babb8c&sid=zfS&spellCorrectionEnabled=false";
+  const youtubeUrl = "http://www.youtube.com/@HADSTechovations";
+  const twitterUrl = "https://twitter.com/HADSTech";
+
+  const enhancedKeywords = "HADS Technovations LLP, cloud solutions, AWS consulting, cloud migration, DevOps automation, digital transformation";
+
   return (
     <div className="min-h-screen flex flex-col bg-white" ref={scrollRef}>
       <SEOHead
-        title="HADS Technovations LLP"
-        description="HADS Technovations LLP - India's premier cloud solutions provider and AWS partner."
+        title="HADS Technovations LLP | Leading Cloud Solutions Provider"
+        description="HADS Technovations LLP - India's premier cloud solutions provider and AWS partner specializing in cloud migration, DevOps automation, and digital transformation."
         keywords={enhancedKeywords}
         ogUrl="/"
-        schema={schema}
+        schema={enhancedSchema}
         linkedinUrl={linkedinUrl}
         youtubeUrl={youtubeUrl}
         twitterUrl={twitterUrl}
         gaMeasurementId={GA_MEASUREMENT_ID}
       />
       
-      {/* Google Analytics - extra implementation via component to ensure it loads */}
       <GoogleAnalytics measurementId={GA_MEASUREMENT_ID} />
       
-      {/* Main content */}
       <div id="hero">
         <HeroSection />
       </div>
@@ -272,7 +351,6 @@ const IndexPage = () => {
         <div id="roadmap">
           <EnhancedCloudRoadmap />
         </div>
-        {/* Countries section now comes before Industries */}
         <div id="global-coverage">
           <GlobalCoverageSection />
         </div>
@@ -282,7 +360,7 @@ const IndexPage = () => {
         <div id="resources">
           <ResourcesSection />
         </div>
-        <div id="about"className="mt-10">
+        <div id="about" className="mt-10">
           <AboutSection />
         </div>
         <div id="partners">
@@ -296,44 +374,15 @@ const IndexPage = () => {
         </div>
       </main>
       
-      {/* Add the periodic promotion modal */}      
       <Footer />
 
-      {/* Enhanced Scroll to top button with progress indicator */}
-      <button 
-        onClick={scrollToTop} 
-        className={cn(
-          "fixed bottom-4 md:bottom-6 lg:bottom-8 right-4 md:right-6 lg:right-8 p-2 md:p-3 lg:p-4 rounded-full bg-gradient-to-r from-hads-purple to-hads-pink text-white shadow-xl z-50 transition-all duration-300 transform",
-          showScrollTop ? "opacity-100 translate-y-0 animate-bounce-subtle" : "opacity-0 translate-y-10 pointer-events-none"
-        )}
-        aria-label="Scroll to top"
-      >
-        <div className="relative">
-          <svg className="w-5 h-5 md:w-6 md:h-6 lg:w-8 lg:h-8" viewBox="0 0 36 36">
-            <circle 
-              cx="18" 
-              cy="18" 
-              r="16" 
-              fill="none" 
-              stroke="rgba(255,255,255,0.3)" 
-              strokeWidth="2" 
-            />
-            <circle 
-              cx="18" 
-              cy="18" 
-              r="16" 
-              fill="none" 
-              stroke="white" 
-              strokeWidth="2" 
-              strokeDasharray={`${2 * Math.PI * 16 * scrollProgress / 100} ${2 * Math.PI * 16}`}
-              strokeDashoffset="0" 
-              strokeLinecap="round" 
-              style={{ transform: 'rotate(-90deg)', transformOrigin: 'center' }}
-            />
-          </svg>
-          <ArrowUp size={isMobile ? 12 : isTablet ? 14 : 18} className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-transform duration-200" />
-        </div>
-      </button>
+      <ScrollToTopButton 
+        showScrollTop={showScrollTop}
+        scrollProgress={scrollProgress}
+        scrollToTop={scrollToTop}
+        isMobile={isMobile}
+        isTablet={isTablet}
+      />
     </div>
   );
 };

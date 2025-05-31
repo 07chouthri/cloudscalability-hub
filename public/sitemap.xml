@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
->
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
   <url>
     <loc>https://www.hadstechnovations.com/</loc>
@@ -15,7 +14,8 @@
       <image:caption>HADS Technovations LLP - AWS Partner and Cloud Solutions Provider</image:caption>
     </image:image>
   </url>
-   <url>
+
+  <url>
     <loc>https://www.hadstechnovations.com/about</loc>
     <lastmod>2025-05-20</lastmod>
     <changefreq>monthly</changefreq>
@@ -25,7 +25,7 @@
       <image:title>About HADS Technovations</image:title>
     </image:image>
   </url>
- 
+
   <url>
     <loc>https://www.hadstechnovations.com/cloud-migration</loc>
     <lastmod>2025-05-20</lastmod>
@@ -36,14 +36,14 @@
       <image:title>AWS Cloud Migration Services</image:title>
     </image:image>
   </url>
- 
+
   <url>
     <loc>https://www.hadstechnovations.com/contact</loc>
     <lastmod>2025-05-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
- 
+
   <url>
     <loc>https://www.hadstechnovations.com/finops</loc>
     <lastmod>2025-05-20</lastmod>
@@ -54,7 +54,7 @@
       <image:title>FinOps and AWS Cost Optimization</image:title>
     </image:image>
   </url>
- 
+
   <url>
     <loc>https://www.hadstechnovations.com/devops</loc>
     <lastmod>2025-05-20</lastmod>
@@ -65,7 +65,7 @@
       <image:title>DevOps Automation Services</image:title>
     </image:image>
   </url>
- 
+
   <url>
     <loc>https://www.hadstechnovations.com/cloud-managed-services</loc>
     <lastmod>2025-05-20</lastmod>
@@ -76,7 +76,7 @@
       <image:title>Cloud Managed Services</image:title>
     </image:image>
   </url>
- 
+
   <url>
     <loc>https://www.hadstechnovations.com/security-compliance</loc>
     <lastmod>2025-05-20</lastmod>
@@ -87,11 +87,12 @@
       <image:title>Security and Compliance Services</image:title>
     </image:image>
   </url>
- 
+
   <url>
     <loc>https://www.hadstechnovations.com/partners</loc>
     <lastmod>2025-05-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
 </urlset>

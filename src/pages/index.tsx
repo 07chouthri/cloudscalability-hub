@@ -239,7 +239,7 @@ const IndexPage = () => {
     <div className="min-h-screen flex flex-col bg-white" ref={scrollRef}>
       <SEOHead
         title="HADS Technovations LLP"
-        description="HADS Technovations LLP - India's premier cloud solutions provider and AWS partner. We specialize in custom application development, cloud migration, DevOps automation, and digital transformation. Founded in 2020, serving enterprises globally with cutting-edge technology solutions."
+        description="HADS Technovations LLP - India's premier cloud solutions provider and AWS partner."
         keywords={enhancedKeywords}
         ogUrl="/"
         schema={schema}

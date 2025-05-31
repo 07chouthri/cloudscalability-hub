@@ -21,8 +21,6 @@ const DevOpsPage = lazyLoadComponent(() => import('./pages/DevOpsPage'));
 const ContainerizationPage = lazyLoadComponent(() => import('./pages/ContainerizationPage'));
 const SecurityCompliancePage = lazyLoadComponent(() => import('./pages/SecurityCompliancePage'));
 const PartnersPage = lazyLoadComponent(() => import('./pages/PartnersPage'));
-const ChartsPage = lazyLoadComponent(() => import('./pages/ChartsPage'));
-const HadsTechnovationsLLP = lazyLoadComponent(() => import('./pages/HadsTechnovationsLLP'));
 
 // Loading fallback component
 const PageLoader = () => (
@@ -75,9 +73,6 @@ function App() {
                   <Route path="/devops" element={<DevOpsPage />} />
                   <Route path="/cloud-managed-services" element={<ContainerizationPage />} />
                   <Route path="/security-compliance" element={<SecurityCompliancePage />} />
-                  <Route path="/charts" element={<ChartsPage />} />
-                  <Route path="/hads-technovations-llp" element={<HadsTechnovationsLLP />} />
-                  <Route path="/aws-partner-india" element={<HadsTechnovationsLLP />} />
                   <Route path="/logo.png" element={<Logo />} />
                   <Route path="/partners" element={<PartnersPage />} />
                   <Route path="*" element={<NotFound />} />

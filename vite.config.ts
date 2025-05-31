@@ -10,10 +10,7 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
   },
   plugins: [
-    react({
-      // Enable React refresh for better development experience
-      fastRefresh: true,
-    }),
+    react(),
     mode === 'development' && Inspect(), 
   ].filter(Boolean),
   resolve: {

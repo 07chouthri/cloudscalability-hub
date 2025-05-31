@@ -1,3 +1,4 @@
+
 import { useEffect, useRef, useState, memo } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -122,8 +123,18 @@ const IndexPage = () => {
     });
   };
 
+  // Social media URLs
+  const socialUrls = {
+    linkedin: "https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Aorganization%3A106360221&keywords=hads%20technovations%20llp&origin=RICH_QUERY_SUGGESTION&position=0&searchId=a54d4b81-3f2b-4e95-b74f-107c37babb8c&sid=zfS&spellCorrectionEnabled=false",
+    youtube: "http://www.youtube.com/@HADSTechovations",
+    twitter: "https://twitter.com/HADSTech"
+  };
+
+  // Enhanced keywords with stronger company branding
+  const seoKeywords = "HADS Technovations LLP, HADS Technovations, HADS LLP, HADS Tech, HADS company, HADS India, HADS Technovations Limited Liability Partnership, My Application, custom application development, cloud applications, web applications, mobile applications, enterprise software development, application modernization, cloud migration services, aws consulting, application hosting, software development company india, custom software solutions, business applications, cloud native applications, application security, scalable applications, HADS application services, digital transformation, devops automation, finops optimization, managed cloud services, HADS Technovations LLP company profile, HADS Technovations LLP services, HADS Technovations LLP AWS partner, HADS Technovations LLP cloud solutions";
+
   // Enhanced Schema.org structured data with stronger company focus
-  const schema = {
+  const enhancedSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "HADS Technovations LLP",
@@ -160,9 +171,9 @@ const IndexPage = () => {
       "https://www.hadstechnovations.com/",
       "https://x.com/HADSTech",
       "https://www.facebook.com/hadstechnovations/",
-      "https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Aorganization%3A106360221&keywords=hads%20technovations%20llp&origin=RICH_QUERY_SUGGESTION&position=0&searchId=a54d4b81-3f2b-4e95-b74f-107c37babb8c&sid=zfS&spellCorrectionEnabled=false",
-      "http://www.youtube.com/@HADSTechovations",
-      "https://twitter.com/HADSTech",
+      socialUrls.linkedin,
+      socialUrls.youtube,
+      socialUrls.twitter,
       "https://www.hadstechnovations.com/hads-technovations-llp"
     ],
     "address": {
@@ -281,52 +292,17 @@ const IndexPage = () => {
     }
   };
 
-  // Social media URLs
-  const linkedinUrl = "https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Aorganization%3A106360221&keywords=hads%20technovations%20llp&origin=RICH_QUERY_SUGGESTION&position=0&searchId=a54d4b81-3f2b-4e95-b74f-107c37babb8c&sid=zfS&spellCorrectionEnabled=false";
-  const youtubeUrl = "http://www.youtube.com/@HADSTechovations";
-  const twitterUrl = "https://twitter.com/HADSTech";
-
-  // Enhanced keywords with stronger company branding
-  const enhancedKeywords = "HADS Technovations LLP, HADS Technovations, HADS LLP, HADS Tech, HADS company, HADS India, HADS Technovations Limited Liability Partnership, My Application, custom application development, cloud applications, web applications, mobile applications, enterprise software development, application modernization, cloud migration services, aws consulting, application hosting, software development company india, custom software solutions, business applications, cloud native applications, application security, scalable applications, HADS application services, digital transformation, devops automation, finops optimization, managed cloud services, HADS Technovations LLP company profile, HADS Technovations LLP services, HADS Technovations LLP AWS partner, HADS Technovations LLP cloud solutions";
-
-  const enhancedSchema = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "HADS Technovations LLP",
-    "alternateName": ["HADS", "HADS Tech", "HADS Technovations", "HADS LLP"],
-    "legalName": "HADS Technovations Limited Liability Partnership",
-    "url": "https://www.hadstechnovations.com/",
-    "logo": "https://www.hadstechnovations.com/logo.png",
-    "description": "HADS Technovations LLP - India's leading cloud solutions provider and AWS partner.",
-    "foundingDate": "2020",
-    "industry": ["Information Technology and Cloud Services", "Software Development", "Cloud Computing"],
-    "serviceArea": {
-      "@type": "Place",
-      "name": "Global",
-      "geo": {
-        "@type": "GeoCoordinates",
-        "addressCountry": "IN"
-      }
-    }
-  };
-
-  const linkedinUrl = "https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Aorganization%3A106360221&keywords=hads%20technovations%20llp&origin=RICH_QUERY_SUGGESTION&position=0&searchId=a54d4b81-3f2b-4e95-b74f-107c37babb8c&sid=zfS&spellCorrectionEnabled=false";
-  const youtubeUrl = "http://www.youtube.com/@HADSTechovations";
-  const twitterUrl = "https://twitter.com/HADSTech";
-
-  const enhancedKeywords = "HADS Technovations LLP, cloud solutions, AWS consulting, cloud migration, DevOps automation, digital transformation";
-
   return (
     <div className="min-h-screen flex flex-col bg-white" ref={scrollRef}>
       <SEOHead
         title="HADS Technovations LLP | Leading Cloud Solutions Provider"
         description="HADS Technovations LLP - India's premier cloud solutions provider and AWS partner specializing in cloud migration, DevOps automation, and digital transformation."
-        keywords={enhancedKeywords}
+        keywords={seoKeywords}
         ogUrl="/"
         schema={enhancedSchema}
-        linkedinUrl={linkedinUrl}
-        youtubeUrl={youtubeUrl}
-        twitterUrl={twitterUrl}
+        linkedinUrl={socialUrls.linkedin}
+        youtubeUrl={socialUrls.youtube}
+        twitterUrl={socialUrls.twitter}
         gaMeasurementId={GA_MEASUREMENT_ID}
       />
       

@@ -1,19 +1,18 @@
-
-import ContainerizationPage from '@/pages/ContainerizationPage';
+import AppDevelopmentPage from '@/pages/AppDevelopmentPage';
 import { Helmet } from 'react-helmet-async';
 
-export default function CloudSolutions() {
+export default function AppDevelopment() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Cloud Solutions & Managed Services",
+    "name": "Application Development Services",
     "provider": {
       "@type": "Organization",
       "name": "HADS Technovations LLP",
       "url": "https://www.hadstechnovations.com"
     },
-    "description": "HADS provides comprehensive cloud solutions and managed services including AWS, Azure, GCP multi-cloud architecture, cloud infrastructure management, and 24x7 cloud support in Chennai.",
-    "serviceType": "Cloud Solutions and Managed Services",
+    "description": "HADS provides comprehensive application development services including mobile app development, web application development, custom software development, and progressive web apps in Chennai.",
+    "serviceType": "Application Development Services",
     "areaServed": "Chennai, Tamil Nadu, India, Global",
     "sameAs": [
       "https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Aorganization%3A106360221&keywords=hads%20technovations%20llp&origin=RICH_QUERY_SUGGESTION&position=0&searchId=a54d4b81-3f2b-4e95-b74f-107c37babb8c&sid=zfS&spellCorrectionEnabled=false",
@@ -26,18 +25,18 @@ export default function CloudSolutions() {
     <>
       <Helmet>
         {/* SEO Title */}
-        <title>Cloud Solutions & Managed Services Chennai | AWS Azure GCP Multi-Cloud | HADS Technovations LLP</title>
+        <title>App Development Services Chennai | Mobile Web Apps | HADS Technovations LLP</title>
 
         {/* Meta Description */}
         <meta
           name="description"
-          content="Leading cloud solutions and managed services in Chennai. HADS provides AWS, Azure, GCP multi-cloud architecture, 24x7 cloud support, infrastructure management, containerization, and serverless solutions for businesses."
+          content="Comprehensive application development services in Chennai. HADS provides mobile app development, web application development, custom software development, progressive web apps, and full-stack development for businesses."
         />
 
         {/* Meta Keywords - Top 5 focused keywords */}
         <meta
           name="keywords"
-          content="cloud solutions Chennai, AWS cloud services Chennai, multi-cloud architecture Chennai, cloud infrastructure management Chennai, cloud managed services Tamil Nadu"
+          content="app development Chennai, mobile app development Chennai, web application development Chennai, custom software development Chennai, progressive web apps Chennai"
         />
 
         {/* Robots & Crawlers */}
@@ -52,15 +51,14 @@ export default function CloudSolutions() {
         <meta name="web_author" content="HADS Technovations LLP" />
         <meta name="rating" content="general" />
         <meta name="distribution" content="global" />
-        <meta name="revisit-after" content="1 days" />
-        <meta name="classification" content="Cloud Services, AWS Consulting, Cloud Migration, IT Services" />
+        <meta name="classification" content="Application Development, Mobile Apps, Web Development, Software Development" />
         <meta name="language" content="en" />
-        <meta name="audience" content="Business, Enterprise, Developers, IT Professionals" />
+        <meta name="audience" content="Business, Startups, Entrepreneurs, IT Professionals" />
         <meta name="coverage" content="India, Chennai, Tamil Nadu, APAC, Worldwide" />
-        <meta name="category" content="Cloud Services, AWS Solutions, IT Consulting, DevOps, Digital Transformation" />
+        <meta name="category" content="App Development, Mobile Development, Web Development, Software Engineering" />
         <meta
           name="subject"
-          content="Best Cloud Solutions Chennai | AWS Azure GCP Multi-Cloud Services | Premier Cloud Infrastructure Management"
+          content="Best App Development Chennai | Mobile Web Apps Development | Premier Software Development Services"
         />
 
         {/* Local SEO */}
@@ -71,21 +69,21 @@ export default function CloudSolutions() {
         <meta name="ICBM" content="13.0827, 80.2707" />
 
         {/* Canonical URL */}
-        <link rel="canonical" href="https://www.hadstechnovations.com/services/cloud-solutions" />
+        <link rel="canonical" href="https://www.hadstechnovations.com/services/app-development" />
 
         {/* Open Graph */}
-        <meta property="og:title" content="Cloud Solutions & Managed Services Chennai | AWS Azure GCP Multi-Cloud | HADS" />
-        <meta property="og:description" content="Leading cloud solutions and managed services in Chennai. HADS provides AWS, Azure, GCP multi-cloud architecture, 24x7 cloud support, and infrastructure management for businesses." />
+        <meta property="og:title" content="App Development Services Chennai | Mobile Web Apps | HADS" />
+        <meta property="og:description" content="Comprehensive application development services in Chennai. Mobile app development, web applications, and custom software development for businesses." />
         <meta property="og:image" content="https://www.hadstechnovations.com/logo.png" />
-        <meta property="og:url" content="https://www.hadstechnovations.com/services/cloud-solutions" />
+        <meta property="og:url" content="https://www.hadstechnovations.com/services/app-development" />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="HADS Technovations LLP - Cloud Solutions Chennai" />
+        <meta property="og:site_name" content="HADS Technovations LLP - App Development Chennai" />
         <meta property="og:locale" content="en_US" />
 
         {/* Twitter Card */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:title" content="Cloud Solutions Chennai | AWS Azure GCP Multi-Cloud | HADS" />
-        <meta property="twitter:description" content="Leading cloud solutions and managed services in Chennai. AWS, Azure, GCP multi-cloud architecture and 24x7 support." />
+        <meta property="twitter:title" content="App Development Chennai | Mobile Web Apps | HADS" />
+        <meta property="twitter:description" content="Comprehensive application development services in Chennai. Mobile and web app development." />
         <meta property="twitter:image" content="https://www.hadstechnovations.com/logo.png" />
         <meta property="twitter:site" content="@HADSTech" />
         <meta property="twitter:creator" content="@HADSTech" />
@@ -98,7 +96,7 @@ export default function CloudSolutions() {
           {JSON.stringify(schema)}
         </script>
       </Helmet>
-      <ContainerizationPage />
+      <AppDevelopmentPage />
     </>
   );
 }

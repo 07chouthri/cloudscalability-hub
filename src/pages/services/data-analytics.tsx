@@ -34,10 +34,10 @@ export default function DataAnalytics() {
           content="Advanced FinOps and cloud cost optimization services in Chennai. HADS provides cloud cost management, budget optimization, resource rightsizing, AWS cost optimization, and financial governance for businesses."
         />
 
-        {/* Meta Keywords - Top 10 focused keywords */}
+        {/* Meta Keywords - Top 5 focused keywords */}
         <meta
           name="keywords"
-          content="finops Chennai, cloud cost optimization Chennai, AWS cost optimization Chennai, cloud financial management Chennai, cloud budget optimization Chennai, rightsizing recommendations Chennai, reserved instances optimization Chennai, cloud cost analysis Chennai, cloud cost consulting Chennai, cloud economics Chennai"
+          content="finops Chennai, cloud cost optimization Chennai, AWS cost optimization Chennai, cloud financial management Chennai, cloud budget optimization Chennai"
         />
 
         {/* Robots & Crawlers */}

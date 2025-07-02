@@ -95,4 +95,48 @@
     <priority>0.7</priority>
   </url>
 
+  <url>
+    <loc>https://www.hadstechnovations.com/services/cloud-solutions</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.hadstechnovations.com/logo.png</image:loc>
+      <image:title>Cloud Solutions Services</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.hadstechnovations.com/services/security</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.hadstechnovations.com/logo.png</image:loc>
+      <image:title>Security Services</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.hadstechnovations.com/services/data-analytics</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.hadstechnovations.com/logo.png</image:loc>
+      <image:title>FinOps Services</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.hadstechnovations.com/services/app-development</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.hadstechnovations.com/logo.png</image:loc>
+      <image:title>App Development Services</image:title>
+    </image:image>
+  </url>
+
 </urlset>

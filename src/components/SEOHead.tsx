@@ -19,9 +19,9 @@ interface SEOHeadProps {
 }
 
 const SEOHead = ({
-  title = "Managed Cloud Services Chennai | Best Cloud Migration Company in Chennai | AWS Cloud Services India | FinOps & DevOps Experts | Top 10 Cloud Migration Companies in India | Cloud Migration Services Chennai | Best AWS Consulting Partner in India | Cybersecurity in Chennai | Cloud Migration & Cost Optimization in India",
-  description = "HADS Technovations LLP – #1 Best Cloud Migration Company in Chennai, Top AWS Cloud Services India. Leading FinOps & DevOps Experts among Top 10 Cloud Migration Companies in India. Premier Cloud Migration Services Chennai & Best AWS Consulting Partner in India.",
-  keywords = "HADS Technovations LLP, cloud migration services Chennai, AWS partner Chennai",
+  title = "HADS Technovations LLP | Cloud Migration Company Chennai | AWS Cloud Services India",
+  description = "HADS Technovations LLP - Leading cloud migration company in Chennai. Expert AWS cloud services, DevOps automation, FinOps optimization, and cybersecurity solutions for businesses in India.",
+  keywords = "cloud migration Chennai, AWS partner Chennai, managed cloud services Tamil Nadu, DevOps automation Chennai, cybersecurity Chennai",
   ogImage = "https://www.hadstechnovations.com/logo.png",
   ogUrl,
   schema,

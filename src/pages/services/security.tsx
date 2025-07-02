@@ -34,10 +34,10 @@ export default function Security() {
           content="Comprehensive cybersecurity and compliance services in Chennai. HADS provides cloud security, data protection, GDPR/HIPAA compliance, security audits, penetration testing, and threat monitoring for businesses."
         />
 
-        {/* Meta Keywords - Top 10 focused keywords */}
+        {/* Meta Keywords - Top 5 focused keywords */}
         <meta
           name="keywords"
-          content="cybersecurity Chennai, cloud security Chennai, GDPR compliance Chennai, security audit Chennai, penetration testing Chennai, threat monitoring Chennai, incident response Chennai, security consulting Chennai, network security Chennai, data protection Chennai"
+          content="cybersecurity Chennai, cloud security Chennai, GDPR compliance Chennai, security audit Chennai, data protection Chennai"
         />
 
         {/* Robots & Crawlers */}

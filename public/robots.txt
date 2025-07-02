@@ -130,4 +130,3 @@ Sitemap: https://www.hadstechnovations.com/sitemap.xml
 # Location: Chennai, India – Serving Globally
 # Founded: 2020
 # Certifications: AWS Partner
-# Target Keywords: HADS Technovations LLP, cloud solutions provider, AWS partner India, application development

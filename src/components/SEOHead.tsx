@@ -21,7 +21,7 @@ interface SEOHeadProps {
 const SEOHead = ({
   title = "Managed Cloud Services Chennai | Best Cloud Migration Company in Chennai | AWS Cloud Services India | FinOps & DevOps Experts | Top 10 Cloud Migration Companies in India | Cloud Migration Services Chennai | Best AWS Consulting Partner in India | Cybersecurity in Chennai | Cloud Migration & Cost Optimization in India",
   description = "HADS Technovations LLP – #1 Best Cloud Migration Company in Chennai, Top AWS Cloud Services India. Leading FinOps & DevOps Experts among Top 10 Cloud Migration Companies in India. Premier Cloud Migration Services Chennai & Best AWS Consulting Partner in India.",
-  keywords = "HADS Technovations LLP, cloud migration services Chennai, AWS partner Chennai, managed cloud services Tamil Nadu, DevOps automation Chennai, cloud consulting India, FinOps cost optimization, cybersecurity solutions Chennai, cloud infrastructure management, 24x7 cloud support Chennai, kubernetes services India, docker containerization, CI CD pipeline automation, cloud security assessment Chennai, disaster recovery planning, serverless architecture AWS, microservices development, infrastructure as code, configuration management, monitoring solutions, performance optimization, scalability consulting, high availability design, load balancing AWS, auto scaling configuration, blue green deployment, cloud economics consulting, cost optimization strategies, budget management cloud, rightsizing recommendations, reserved instances planning, spot instances optimization, cloud training programs Chennai, AWS certification training India, DevOps bootcamp Tamil Nadu, kubernetes certification, terraform training, ansible automation, jenkins CI CD, digital transformation Chennai, business process automation, API development India, mobile app development Chennai, web application development",
+  keywords = "HADS Technovations LLP, cloud migration services Chennai, AWS partner Chennai",
   ogImage = "https://www.hadstechnovations.com/logo.png",
   ogUrl,
   schema,
@@ -37,7 +37,7 @@ const SEOHead = ({
   const siteUrl = 'https://www.hadstechnovations.com';
   const fullUrl = ogUrl ? `${siteUrl}${ogUrl}` : siteUrl;
   const canonicalUrl = canonical || fullUrl;
-  
+
   return (
     <Helmet>
       {/* ✅ SEO Title */}

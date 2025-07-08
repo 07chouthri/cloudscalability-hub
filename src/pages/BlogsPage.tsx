@@ -64,7 +64,7 @@ const BlogsPage = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Cloud Technology <span className="text-hads-pink">Insights</span>
+                Cloud Technology <span className="text-primary">Insights</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8">
                 Stay updated with the latest trends, best practices, and expert insights in cloud technology, 
@@ -82,9 +82,9 @@ const BlogsPage = () => {
               {blogPosts.filter(post => post.featured).map((post) => (
                 <Card key={post.id} className="mb-12 overflow-hidden shadow-lg">
                   <div className="md:flex">
-                    <div className="md:w-1/3 bg-gradient-to-br from-hads-teal to-hads-purple h-64 md:h-auto"></div>
+                    <div className="md:w-1/3 bg-gradient-to-br from-primary to-secondary h-64 md:h-auto"></div>
                     <div className="md:w-2/3 p-8">
-                      <Badge className="mb-4 bg-hads-pink/10 text-hads-pink">{post.category}</Badge>
+                      <Badge className="mb-4 bg-primary/10 text-primary">{post.category}</Badge>
                       <h2 className="text-3xl font-bold text-gray-900 mb-4">{post.title}</h2>
                       <p className="text-gray-600 mb-6 text-lg">{post.excerpt}</p>
                       <div className="flex items-center justify-between">
@@ -99,7 +99,7 @@ const BlogsPage = () => {
                           </div>
                           <span>{post.readTime}</span>
                         </div>
-                        <Button className="bg-hads-pink hover:bg-hads-pink/90">
+                        <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
                           Read More <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>
                       </div>
@@ -112,9 +112,9 @@ const BlogsPage = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {blogPosts.filter(post => !post.featured).map((post) => (
                   <Card key={post.id} className="hover:shadow-lg transition-shadow">
-                    <div className="h-48 bg-gradient-to-br from-hads-teal to-hads-purple"></div>
+                    <div className="h-48 bg-gradient-to-br from-primary to-secondary"></div>
                     <CardHeader>
-                      <Badge className="w-fit mb-2 bg-hads-teal/10 text-hads-teal">{post.category}</Badge>
+                      <Badge className="w-fit mb-2 bg-primary/10 text-primary">{post.category}</Badge>
                       <CardTitle className="text-xl">{post.title}</CardTitle>
                       <CardDescription>{post.excerpt}</CardDescription>
                     </CardHeader>

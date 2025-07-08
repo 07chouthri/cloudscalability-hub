@@ -21,6 +21,7 @@ const DevOpsPage = lazyLoadComponent(() => import('./pages/DevOpsPage'));
 const ContainerizationPage = lazyLoadComponent(() => import('./pages/ContainerizationPage'));
 const SecurityCompliancePage = lazyLoadComponent(() => import('./pages/SecurityCompliancePage'));
 const PartnersPage = lazyLoadComponent(() => import('./pages/PartnersPage'));
+const BlogsPage = lazyLoadComponent(() => import('./pages/BlogsPage'));
 
 // Optimized loading fallback with better UX
 const PageLoader = () => (
@@ -91,6 +92,7 @@ function App() {
                   <Route path="/devops" element={<DevOpsPage />} />
                   <Route path="/cloud-managed-services" element={<ContainerizationPage />} />
                   <Route path="/security-compliance" element={<SecurityCompliancePage />} />
+                  <Route path="/blogs" element={<BlogsPage />} />
                   <Route path="/logo.png" element={<Logo />} />
                   <Route path="/partners" element={<PartnersPage />} />
                   <Route path="*" element={<NotFound />} />

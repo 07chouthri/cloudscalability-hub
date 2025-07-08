@@ -92,6 +92,19 @@ const MobileNav = ({ isOpen, setIsOpen, isActive, handleNavigation }: MobileNavP
             </div>
           </div>
           <Link
+            to="/blogs"
+            onClick={() => {
+              handleNavigation('/blogs');
+              closeMenu();
+            }}
+            className={cn(
+              "py-3 px-4 text-base font-medium text-gray-800 hover:bg-gray-100 rounded-lg transition-colors text-left",
+              isActive('/blogs') && "text-hads-pink bg-gray-100"
+            )}
+          >
+            Blogs
+          </Link>
+          <Link
             to="/partners"
             onClick={() => {
               handleNavigation('/partners');

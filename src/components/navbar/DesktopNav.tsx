@@ -83,6 +83,18 @@ const DesktopNav = ({ isActive, handleNavigation }: DesktopNavProps) => {
           
           <NavigationMenuItem>
             <Link 
+              to="/blogs"
+              onClick={() => handleNavigation('/blogs')}
+              className={cn("nav-link text-gray-800 hover:text-hads-pink px-4 py-2 transition-colors",
+                isActive('/blogs') && "text-hads-pink font-medium"
+              )}
+            >
+              Blogs
+            </Link>
+          </NavigationMenuItem>
+          
+          <NavigationMenuItem>
+            <Link 
               to="/partners"
               onClick={() => handleNavigation('/partners')}
               className={cn("nav-link text-gray-800 hover:text-hads-pink px-4 py-2 transition-colors",

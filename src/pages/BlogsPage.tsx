@@ -1,40 +1,85 @@
+import { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Calendar, User, ArrowRight } from 'lucide-react';
+import { Calendar, User, ArrowRight, Settings } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import SanityConfigDialog from '@/components/SanityConfigDialog';
+import { fetchBlogPosts, BlogPost } from '@/lib/sanity';
 
 const BlogsPage = () => {
-  // Sample blog posts - will be replaced with CMS data
-  const blogPosts = [
+  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  // Load blog posts from Sanity or fallback to sample data
+  useEffect(() => {
+    const loadBlogPosts = async () => {
+      try {
+        // Check if Sanity is configured
+        const projectId = localStorage.getItem('sanity-project-id');
+        
+        if (projectId) {
+          // Fetch from Sanity
+          const posts = await fetchBlogPosts();
+          if (posts.length > 0) {
+            setBlogPosts(posts);
+          } else {
+            // If no posts from Sanity, use sample data
+            setBlogPosts(sampleBlogPosts);
+          }
+        } else {
+          // Use sample data if Sanity not configured
+          setBlogPosts(sampleBlogPosts);
+        }
+      } catch (err) {
+        console.error('Error loading blog posts:', err);
+        setError('Failed to load blog posts');
+        setBlogPosts(sampleBlogPosts); // Fallback to sample data
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadBlogPosts();
+  }, []);
+
+  // Sample blog posts as fallback
+  const sampleBlogPosts: BlogPost[] = [
     {
-      id: 1,
+      _id: '1',
       title: "Complete Guide to AWS Cloud Migration in 2024",
+      slug: { current: "aws-cloud-migration-guide-2024" },
       excerpt: "Learn the best practices and strategies for migrating your infrastructure to AWS cloud with minimal downtime and maximum efficiency.",
-      author: "HADS Team",
-      date: "2024-01-15",
+      content: [],
+      author: { name: "HADS Team" },
+      publishedAt: "2024-01-15",
       category: "Cloud Migration",
       readTime: "8 min read",
       featured: true
     },
     {
-      id: 2,
+      _id: '2',
       title: "FinOps Best Practices: Optimizing Cloud Costs",
+      slug: { current: "finops-best-practices-cloud-costs" },
       excerpt: "Discover how to implement FinOps methodologies to reduce cloud spending while maintaining performance and scalability.",
-      author: "HADS Team",
-      date: "2024-01-10",
+      content: [],
+      author: { name: "HADS Team" },
+      publishedAt: "2024-01-10",
       category: "FinOps",
       readTime: "6 min read",
       featured: false
     },
     {
-      id: 3,
+      _id: '3',
       title: "DevOps Automation: CI/CD Pipeline Setup",
+      slug: { current: "devops-automation-cicd-pipeline" },
       excerpt: "Step-by-step guide to setting up automated CI/CD pipelines for faster, more reliable software deployment.",
-      author: "HADS Team",
-      date: "2024-01-05",
+      content: [],
+      author: { name: "HADS Team" },
+      publishedAt: "2024-01-05",
       category: "DevOps",
       readTime: "10 min read",
       featured: false
@@ -66,10 +111,13 @@ const BlogsPage = () => {
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Cloud Technology <span className="text-primary">Insights</span>
               </h1>
-              <p className="text-xl text-gray-600 mb-8">
-                Stay updated with the latest trends, best practices, and expert insights in cloud technology, 
-                DevOps automation, and digital transformation.
-              </p>
+              <div className="flex items-center justify-between">
+                <p className="text-xl text-gray-600">
+                  Stay updated with the latest trends, best practices, and expert insights in cloud technology, 
+                  DevOps automation, and digital transformation.
+                </p>
+                <SanityConfigDialog />
+              </div>
             </div>
           </div>
         </section>
@@ -77,10 +125,22 @@ const BlogsPage = () => {
         {/* Blog Posts Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              {/* Featured Post */}
-              {blogPosts.filter(post => post.featured).map((post) => (
-                <Card key={post.id} className="mb-12 overflow-hidden shadow-lg">
+          <div className="max-w-6xl mx-auto">
+            {loading ? (
+              <div className="text-center py-16">
+                <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-primary mx-auto"></div>
+                <p className="mt-4 text-gray-600">Loading blog posts...</p>
+              </div>
+            ) : error ? (
+              <div className="text-center py-16">
+                <p className="text-red-600 mb-4">{error}</p>
+                <Button onClick={() => window.location.reload()}>Try Again</Button>
+              </div>
+            ) : (
+              <>
+                {/* Featured Post */}
+                {blogPosts.filter(post => post.featured).map((post) => (
+                  <Card key={post._id} className="mb-12 overflow-hidden shadow-lg">
                   <div className="md:flex">
                     <div className="md:w-1/3 bg-gradient-to-br from-primary to-secondary h-64 md:h-auto"></div>
                     <div className="md:w-2/3 p-8">
@@ -91,11 +151,11 @@ const BlogsPage = () => {
                         <div className="flex items-center space-x-4 text-sm text-gray-500">
                           <div className="flex items-center">
                             <User className="h-4 w-4 mr-1" />
-                            {post.author}
+                            {post.author.name}
                           </div>
                           <div className="flex items-center">
                             <Calendar className="h-4 w-4 mr-1" />
-                            {new Date(post.date).toLocaleDateString()}
+                            {new Date(post.publishedAt).toLocaleDateString()}
                           </div>
                           <span>{post.readTime}</span>
                         </div>
@@ -106,12 +166,12 @@ const BlogsPage = () => {
                     </div>
                   </div>
                 </Card>
-              ))}
+                  ))}
 
-              {/* Regular Posts Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {blogPosts.filter(post => !post.featured).map((post) => (
-                  <Card key={post.id} className="hover:shadow-lg transition-shadow">
+                  {/* Regular Posts Grid */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {blogPosts.filter(post => !post.featured).map((post) => (
+                      <Card key={post._id} className="hover:shadow-lg transition-shadow">
                     <div className="h-48 bg-gradient-to-br from-primary to-secondary"></div>
                     <CardHeader>
                       <Badge className="w-fit mb-2 bg-primary/10 text-primary">{post.category}</Badge>
@@ -122,7 +182,7 @@ const BlogsPage = () => {
                       <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                         <div className="flex items-center">
                           <Calendar className="h-4 w-4 mr-1" />
-                          {new Date(post.date).toLocaleDateString()}
+                          {new Date(post.publishedAt).toLocaleDateString()}
                         </div>
                         <span>{post.readTime}</span>
                       </div>
@@ -131,20 +191,25 @@ const BlogsPage = () => {
                       </Button>
                     </CardContent>
                   </Card>
-                ))}
-              </div>
+                    ))}
+                  </div>
+                </>
+              )}
 
               {/* CMS Integration Notice */}
               <div className="mt-16 text-center">
                 <Card className="max-w-2xl mx-auto p-8 bg-blue-50 border-blue-200">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Content Management System</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Sanity CMS Integration</h3>
                   <p className="text-gray-600 mb-6">
-                    To enable full blog functionality with content management, connect your project to Supabase. 
-                    This will allow you to create, edit, and manage blog posts dynamically.
+                    Your blog is now connected to Sanity CMS! Configure your Sanity project details above to start managing your blog content. 
+                    Create blog posts in your Sanity studio and they'll appear here automatically.
                   </p>
-                  <Button className="bg-green-600 hover:bg-green-700">
-                    Connect to Supabase CMS
-                  </Button>
+                  <div className="space-y-3">
+                    <SanityConfigDialog />
+                    <p className="text-sm text-gray-500">
+                      Note: API credentials are stored locally in your browser for security.
+                    </p>
+                  </div>
                 </Card>
               </div>
             </div>
